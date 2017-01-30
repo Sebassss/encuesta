@@ -96,7 +96,7 @@
 
 <!-- Services -->
 <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-<section id="services" class="services bg-primary">
+<section id="services" class="services bg-info">
     <div class="container">
         <div class="row text-left">
             <div class="col-lg-10 col-lg-offset-1">
@@ -824,8 +824,269 @@
 <!-- Call to Action -->
 
 <!-- Map -->
-<section id="contact" class="map">
+<section id="contact" class="map bg-success">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h2>
+                    3 - Que temas de los ade abajo enumerados serian de prioridad para capacitar a los colaboradores de su equipo.
+                    Por favor seleccione solo <b>4</b> de los que considere mas relevantes.
+                </h2>
 
+                <table class="table table-striped" style="border: 1px solid #000">
+                    <thead>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Trabajo en equipo</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                        <td>Liderazgo</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gestión del Cambio</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                        <td>Diversidad Generacional</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Comunicación efectiva</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                        <td>Planificación Estrategica</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Comunicación efectiva</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                        <td>Planificación Estrategica</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Oratoria</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                        <td>Gestión del talento</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Office (Word, Excel)</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                        <td>Clima Laboral</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Manejo de correo electrónico</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                        <td>Otros (Describa)</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="text" id="Option_4" name="Option_4" >
+                            </label>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact2" class="map bg-danger">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h2>
+                    4 - Seleccione las capacitaciones que le ayudarían a Ud. a mejorar su desempeño:
+                </h2>
+
+                <table class="table table-striped" style="border: 1px solid #000">
+                    <thead>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Trabajo en equipo</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                        <td>Liderazgo</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gestión del Cambio</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                        <td>Diversidad Generacional</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Comunicación efectiva</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                        <td>Planificación Estrategica</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Comunicación efectiva</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                        <td>Planificación Estrategica</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Oratoria</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                        <td>Gestión del talento</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Office (Word, Excel)</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                        <td>Clima Laboral</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Manejo de correo electrónico</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                            </label>
+                        </td>
+                        <td>Otros (Describa)</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="text" id="Option_4" name="Option_4" >
+                            </label>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact3" class="map bg-warning">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h2>
+                    5 - Por favor, en las siguientes lineas escriba comentarios,
+                    opiniones, aclaraciones o sugerencias en torno a los temas planteados en esta encuesta.
+                </h2>
+
+                <div class="form-group">
+                    <label for="comment">Comentarios:</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- Footer -->
@@ -833,13 +1094,15 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h4><strong>Area de Informática - Ministerio de Salud Pública</strong>
+                <h4>
+                    Su colaboración es muy valiosa para nosotros.<br>
+                    <strong>Dpto. Gestión de RRHH - MSP</strong>
                 </h4>
                 <p>Argentina
                     <br>San Juan</p>
                 <ul class="list-unstyled">
                     <li><i class="fa fa-phone fa-fw"></i> (+54 0264) 4305619 / 4305575</li>
-                    <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:msal@sanjuan.gov.ar">msal@sanjuan.gov.ar</a>
+                    <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:msal@sanjuan.gov.ar">Area de Informática - Ministerio de Salud Pública</a>
                     </li>
                 </ul>
                 <br>

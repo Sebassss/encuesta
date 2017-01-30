@@ -11,6 +11,35 @@ body {
     width: 100%;
     height: 100%;
 }
+
+
+.table td
+{
+
+    border:solid;
+    border-color: #ddd;
+    border-width: 1px;
+    border-radius: 1px;
+}
+
+.table th
+{
+
+    border:solid;
+    border-color: #ddd;
+    border-width: 1px;
+    border-radius: 1px;
+}
+
+.table tr
+{
+
+    border:solid;
+    border-color: #ddd;
+    border-width: 1px;
+    border-radius: 1px;
+}
+
 #femaleRadio
 {width:20px; height:20px; position:absolute;}
 
