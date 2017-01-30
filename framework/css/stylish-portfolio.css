@@ -40,11 +40,19 @@ body {
     border-radius: 1px;
 }
 
-#femaleRadio
-{width:20px; height:20px; position:absolute;}
 
-.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+.zoom{
     position: static !important;
+    width:20px; height:20px; position:absolute;
+}
+
+.checkbox input[type=checkbox],
+.checkbox-inline input[type=checkbox],
+.radio input[type=radio],
+.radio-inline input[type=radio]
+{
+    position: static !important;
+    width:20px; height:20px; position:absolute;
 }
 
 body {

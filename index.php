@@ -42,19 +42,27 @@
             <a href="#top" onclick=$("#menu-close").click();>Start Bootstrap</a>
         </li>
         <li>
-            <a href="#top" onclick=$("#menu-close").click();>Home</a>
+            <a href="#top" onclick=$("#menu-close").click();>Inicio</a>
         </li>
         <li>
-            <a href="#about" onclick=$("#menu-close").click();>About</a>
+            <a href="#about" onclick=$("#menu-close").click();>Item 1</a>
         </li>
         <li>
-            <a href="#services" onclick=$("#menu-close").click();>Services</a>
+            <a href="#services" onclick=$("#menu-close").click();>Item 2</a>
         </li>
         <li>
-            <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
+            <a href="#portfolio" onclick=$("#menu-close").click();>Item 3</a>
         </li>
         <li>
-            <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
+            <a href="#contact" onclick=$("#menu-close").click();>Item 4</a>
+        </li>
+
+        <li>
+            <a href="#contact2" onclick=$("#menu-close").click();>Item 5</a>
+        </li>
+
+        <li>
+            <a href="#contact3" onclick=$("#menu-close").click();>Contact</a>
         </li>
     </ul>
 </nav>
@@ -80,7 +88,7 @@
         <div class="row">
             <div class="col-lg-12 text-left">
                 <h3>
-                    La encuesta en una técnica para el relevamiento de datos. Esta encuesta permitirá conocer su opinión respecto de su
+                    La encuesta es una técnica para el relevamiento de datos. Esta encuesta permitirá conocer su opinión respecto de su
                     puesto y lugar de trabajo. Para ello es fundamental que le brinde la mayor importancia y honestidad es sus respuestas
                     ya que estos datos nos serviran para evaluar alternativas de solución y pensar en estrategias que puedan mejorar su labor
                     diaria.
@@ -842,13 +850,13 @@
                         <td>Trabajo en equipo</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" >
                             </label>
                         </td>
                         <td>Liderazgo</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                     </tr>
@@ -856,13 +864,13 @@
                         <td>Gestión del Cambio</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                         <td>Diversidad Generacional</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                     </tr>
@@ -870,13 +878,13 @@
                         <td>Comunicación efectiva</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                         <td>Planificación Estrategica</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                     </tr>
@@ -885,13 +893,13 @@
                         <td>Comunicación efectiva</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                         <td>Planificación Estrategica</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                     </tr>
@@ -900,13 +908,13 @@
                         <td>Oratoria</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                         <td>Gestión del talento</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                     </tr>
@@ -915,13 +923,13 @@
                         <td>Office (Word, Excel)</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                         <td>Clima Laboral</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                     </tr>
@@ -930,7 +938,7 @@
                         <td>Manejo de correo electrónico</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                         <td>Otros (Describa)</td>
@@ -965,13 +973,13 @@
                         <td>Trabajo en equipo</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                         <td>Liderazgo</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                     </tr>
@@ -979,13 +987,13 @@
                         <td>Gestión del Cambio</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                         <td>Diversidad Generacional</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                     </tr>
@@ -993,13 +1001,13 @@
                         <td>Comunicación efectiva</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                         <td>Planificación Estrategica</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                     </tr>
@@ -1008,13 +1016,13 @@
                         <td>Comunicación efectiva</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                         <td>Planificación Estrategica</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                     </tr>
@@ -1023,13 +1031,13 @@
                         <td>Oratoria</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                         <td>Gestión del talento</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                     </tr>
@@ -1038,13 +1046,13 @@
                         <td>Office (Word, Excel)</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                         <td>Clima Laboral</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                     </tr>
@@ -1053,7 +1061,7 @@
                         <td>Manejo de correo electrónico</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="radio" id="Option_4" name="Option_4" value="4">
+                                <input class="zoom" type="checkbox" id="Option_4" name="Option_4" value="4">
                             </label>
                         </td>
                         <td>Otros (Describa)</td>
