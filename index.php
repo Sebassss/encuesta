@@ -2,16 +2,24 @@
 
     require_once "db/class.conexion.php";
 
+    $tipo = "";
     if(isset($_GET['tipo']))
     {
-        $tipo = 1;
+        $tipo = $_GET['tipo'];
+        if($tipo>1)
+        {
+            $tipo=1;
+        }
+        else{
+            $tipo=0;
+        }
     }
     else
     {
-        $tipo = 0;
+        die;
     }
 
-    echo $tipo;
+    echo '<input  type="hidden" id="tipo" name = "tipo" value = "'.$tipo.'" >';
 ?>
 
 
@@ -136,8 +144,7 @@
                         <div class="form-group">
                             <label for="country" class="col-sm-3 control-label">Area Programática</label>
                             <div class="col-sm-9">
-                                <select id="cb_areaprog" name="cb_zona" class="form-control">
-                                    <option value="0" selected>Seleccione...</option>
+                                <select id="cb_areaprog" name="cb_areaprog" class="form-control">
                                 </select>
                             </div>
                         </div> <!-- /.form-group -->
@@ -145,7 +152,7 @@
                         <div class="form-group">
                             <label for="birthDate" class="col-sm-3 control-label">Fecha de Nacimiento</label>
                             <div class="col-sm-9">
-                                <input type="date" id="fechanac" name="fechanac" class="form-control">
+                                <input type="date"  id="fechanac" name="fechanac" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
@@ -154,12 +161,12 @@
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <label class="radio-inline">
-                                            <input type="radio" id="femenino" value="F">Femenino
+                                            <input type="radio"  name="sexo" value="F">Femenino
                                         </label>
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="radio-inline">
-                                            <input type="radio" id="masculino" value="M">Masculino
+                                            <input type="radio"  name="sexo" value="M">Masculino
                                         </label>
                                     </div>
                                 </div>
@@ -194,21 +201,21 @@
                         <div class="form-group">
                             <label for="firstName" class="col-sm-3 control-label">Puesto que ocupa</label>
                             <div class="col-sm-9">
-                                <input type="text" id="puesto" name="puesto" placeholder="Puesto que ocupa" class="form-control" autofocus>
+                                <input type="text" maxlength="50" value="" id="puesto" name="puesto" placeholder="Puesto que ocupa" class="form-control" autofocus>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="firstName" class="col-sm-3 control-label">Antiguedad(en años cumplidos)</label>
                             <div class="col-sm-9">
-                                <input type="text" id="antiguedad" name="antiguedad" placeholder="Antiguedad en años" class="form-control" autofocus>
+                                <input type="text" maxlength="2" onkeypress="return justNumbers(event);" id="antiguedad" name="antiguedad" value="" placeholder="Antiguedad en años" class="form-control" autofocus>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="firstName" class="col-sm-3 control-label">Contratado</label>
                             <div class="col-sm-9" >
-                                <input type="radio" id="contratado" name="situacion_trabajo" value="1"  class="form-control" autofocus>
+                                <input type="radio"  name="situacion_trabajo" value="1"  class="form-control" autofocus>
                             </div>
                         </div>
 
@@ -216,7 +223,7 @@
 
                             <label  class="col-sm-3 control-label">Planta Permanente</label>
                             <div class="col-sm-9">
-                                <input type="radio" id="planta" name="situacion_trabajo" value="0" class="form-control" autofocus>
+                                <input type="radio"  name="situacion_trabajo" value="0" class="form-control" autofocus>
                             </div>
                         </div>
 
@@ -832,7 +839,7 @@ if($tipo==1) {
         <div class="row" >
             <div class="col-lg-10 col-lg-offset-1 text-center" >
                 <h2 >
-    3 - Que temas de los ade abajo enumerados serian de prioridad para capacitar a los colaboradores de su equipo .
+    3 - Que temas de los de abajo enumerados serian de prioridad para capacitar a los colaboradores de su equipo .
     Por favor seleccione solo <b>4</b > de los que considere mas relevantes .
                 </h2 >
                 <form id = "3" name = "3" >
@@ -939,7 +946,7 @@ if($tipo==1) {
                         <td > Otros(Describa)</td >
                         <td >
                             <label class="radio-inline" >
-                                <input type = "text" id = "Option_14" name = "Option_14" >
+                                <input maxlength="20" type = "text" id = "Option_14" name = "Option_14" >
                             </label >
                         </td >
                     </tr >
@@ -1067,7 +1074,7 @@ if($tipo==1) {
                         <td>Otros (Describa)</td>
                         <td>
                             <label class="radio-inline">
-                                <input type="text" id="Option_14" name="Option_14" >
+                                <input maxlength="20" type="text" id="Option_14" name="Option_14" >
                             </label>
                         </td>
                     </tr>
@@ -1082,30 +1089,27 @@ if($tipo==1) {
 }
 ?>
 
-<?php
-if($tipo ==1) {
 
-    echo '<section id="contact3" class="map bg-warning">
+
+    <section id="contact3" class="map bg-warning">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <h2>
-                    5 - Por favor, en las siguientes lineas escriba comentarios,
+                    <?php if($tipo==1) { echo '5'; }else{echo '3';}?> - Por favor, en las siguientes lineas escriba comentarios,
                     opiniones, aclaraciones o sugerencias en torno a los temas planteados en esta encuesta.
                 </h2>
 
                 <form id="5" name="5">
                 <div class="form-group">
-                    <label for="comment">Comentarios:</label>
-                    <textarea name="comentario" id="comentario" class="form-control" rows="7"></textarea>
+                    <label for="comment">Comentarios: (max: 100 caracteres)</label>
+                    <textarea  maxlength="100" name="comentario" id="comentario" class="form-control" rows="7"></textarea>
                 </div>
                 </form>
             </div>
         </div>
     </div>
-</section>';
-}
-?>
+</section>
 
 <div class="col-md-12">
     <div class="row text-center">
@@ -1172,31 +1176,201 @@ if($tipo ==1) {
 
 
     }
-    $("#fin_encuesta").on( "click", function(){
-        $.ajax({
-            url:'db/add.php',
-            cache:false,
-            type: 'post',
-            data: { 1: $("#1").serialize(),
+
+    function valida()
+    {
+
+        //1
+        var sexo = $('input[name=sexo]:checked').val();
+        var primario = $('input[name=primario]:checked').val();
+        var secundario = $('input[name=secundario]:checked').val();
+        var terciario = $('input[name=terciario]:checked').val();
+        var universitario = $('input[name=universitario]:checked').val();
+        var siatuacion = $('input[name=situacion_trabajo]:checked').val();
+
+        //2
+        var a1 = $('input[name=1a]:checked').val();
+        var b1 = $('input[name=1b]:checked').val();
+        var c1 = $('input[name=1c]:checked').val();
+        var d1 = $('input[name=1d]:checked').val();
+
+        var a2 = $('input[name=2a]:checked').val();
+        var b2 = $('input[name=2b]:checked').val();
+        var c2 = $('input[name=2c]:checked').val();
+        var d2 = $('input[name=2d]:checked').val();
+
+        var a3 = $('input[name=3a]:checked').val();
+        var b3 = $('input[name=3b]:checked').val();
+        var c3 = $('input[name=3c]:checked').val();
+        var d3 = $('input[name=3d]:checked').val();
+
+        var a4 = $('input[name=4a]:checked').val();
+        var b4 = $('input[name=4b]:checked').val();
+        var c4 = $('input[name=4c]:checked').val();
+        var d4 = $('input[name=4d]:checked').val();
+
+        //3
+        //compruebo mediante cant. seleccionados
+
+        //4
+        var Option_1 = $("#4").find('input[name=Option_1]:checked').val();
+        var Option_2 = $("#4").find('input[name=Option_2]:checked').val();
+        var Option_3 = $("#4").find('input[name=Option_3]:checked').val();
+        var Option_4 = $("#4").find('input[name=Option_4]:checked').val();
+        var Option_5 = $("#4").find('input[name=Option_5]:checked').val();
+        var Option_6 = $("#4").find('input[name=Option_6]:checked').val();
+        var Option_7 = $("#4").find('input[name=Option_7]:checked').val();
+        var Option_8 = $("#4").find('input[name=Option_8]:checked').val();
+        var Option_9 = $("#4").find('input[name=Option_9]:checked').val();
+        var Option_10 = $("#4").find('input[name=Option_10]:checked').val();
+        var Option_11 = $("#4").find('input[name=Option_11]:checked').val();
+        var Option_12 = $("#4").find('input[name=Option_12]:checked').val();
+        var Option_13 = $("#4").find('input[name=Option_13]:checked').val();
+
+
+
+
+
+        if( $("#cb_zona").val()==0) {alert("Seleccione una zona sanitaria."); return false; }
+        if( $("#fechanac").val()=="") {alert("Proporcione una fecha de nacimiento."); return false; }
+        if( typeof(sexo) == 'undefined') {alert("Seleccione tipo de sexo."); return false; }
+
+
+        if( typeof(primario) == 'undefined' &&
+            typeof(secundario) == 'undefined' &&
+            typeof(terciario) == 'undefined' &&
+            typeof(universitario) == 'undefined')
+        {
+            alert("Seleccione al menos una opción sobre el ítem de formación.");
+            return false;
+        }
+
+        if($.trim($("#puesto").val()) == "")
+        {
+            alert("Indique su puesto.");
+            return false;
+        }
+
+        if($.trim($("#antiguedad").val()) == "")
+        {
+            alert("Indique su antiguedad.");
+            return false;
+        }
+
+        if( typeof(siatuacion) == 'undefined') {alert("Indique su situación laboral."); return false; }
+
+        if( typeof(a1)  == 'undefined' ||
+            typeof(b1) == 'undefined' ||
+            typeof(c1) == 'undefined' ||
+            typeof(d1) == 'undefined')
+        {
+            alert("Hay opciones sin seleccionar en el Item 2.");
+            return false;
+        }
+
+        if( typeof(a2) == 'undefined' ||
+            typeof(b2) == 'undefined' ||
+            typeof(c2) == 'undefined' ||
+            typeof(d2) == 'undefined')
+        {
+            alert("Hay opciones sin seleccionar en el Item 2.");
+            return false;
+        }
+
+        if( typeof(a3) == 'undefined' ||
+            typeof(b3) == 'undefined' ||
+            typeof(c3) == 'undefined' ||
+            typeof(d3) == 'undefined')
+        {
+            alert("Hay opciones sin seleccionar en el Item 2.");
+            return false;
+        }
+
+        if( typeof(a4) == 'undefined' ||
+            typeof(b4) == 'undefined' ||
+            typeof(c4) == 'undefined' ||
+            typeof(d4) == 'undefined')
+        {
+            alert("Hay opciones sin seleccionar en el Item 2.");
+            return false;
+        }
+
+
+        if($("#tipo").val() == 1)
+        {
+            if (cant < 5) {
+                alert("Hay opciones sin seleccionar en el Item 3.");
+                return false;
+            }
+
+            if (typeof(Option_1) == 'undefined' &&
+                typeof(Option_2) == 'undefined' &&
+                typeof(Option_3) == 'undefined' &&
+                typeof(Option_4) == 'undefined' &&
+                typeof(Option_5) == 'undefined' &&
+                typeof(Option_6) == 'undefined' &&
+                typeof(Option_7) == 'undefined' &&
+                typeof(Option_8) == 'undefined' &&
+                typeof(Option_9) == 'undefined' &&
+                typeof(Option_10) == 'undefined' &&
+                typeof(Option_11) == 'undefined' &&
+                typeof(Option_12) == 'undefined' &&
+                typeof(Option_13) == 'undefined') {
+                alert("Seleccione al menos una opción del Item 4.");
+                return false;
+            }
+        }
+
+
+        return true;
+    }
+    $("#fin_encuesta").on( "click", function()
+    {
+
+        if(valida() == true) {
+            $.ajax({
+                url: 'db/add.php',
+                cache: false,
+                type: 'post',
+                data: {
+                    1: $("#1").serialize(),
                     2: $("#2").serialize(),
                     3: $("#3").serialize(),
                     4: $("#4").serialize(),
-                    5: $("#5").serialize()
-            },
-            dataType: "json",
-            success: function(response)
-            {
-                console.dir(response);
+                    5: $("#5").serialize(),
+                    tipo: $("#tipo").val()
+                },
+                dataType: "json",
+                success: function (response) {
+                    $("#1")[0].reset();
+                    $("#2")[0].reset();
+                    if($("#tipo").val() == 1) {
+                        $("#3")[0].reset();
+                        $("#4")[0].reset();
+                    }
+                    $("#5")[0].reset();
 
-            },
-            error: function(error)
-            {
-                console.log("Error: " + error)
-                console.dir(error);
-            }
+                    if(response.estado == "true")
+                    {
+                        $("#cb_areaprog").empty();
+                        alert("Muchas Gracias por su respuesta.");
+                        $('html, body').animate({
+                            scrollTop: $("#top").offset().top
+                        }, 1000);
+                    }
 
-        })
+                },
+                error: function (error) {
+                    console.log("Error: " + error)
+                    console.dir(error);
+                }
+
+            })
+        }
     });
+
+
+
     $.ajax({
 
         url:'db/cb_zona.php',
@@ -1205,7 +1379,7 @@ if($tipo ==1) {
         dataType: "json",
         success: function(response)
         {
-            console.dir(response);
+
             for(i=0; i<response.length;i++)
             {
                 $("#cb_zona").append("<option value=" + response[i].value + ">" + response[i].text + "</option>");
@@ -1227,7 +1401,7 @@ if($tipo ==1) {
             dataType: "json",
             success: function(response)
             {
-                console.dir(response);
+
                 $("#cb_areaprog").empty();
                 for(i=0; i<response.length;i++)
                 {
@@ -1318,6 +1492,16 @@ if($tipo ==1) {
     }
     // Enable map zooming with mouse scroll when the user clicks the map
     $('.map').on('click', onMapClickHandler);
+
+
+    function justNumbers(e)
+    {
+        var keynum = window.event ? window.event.keyCode : e.which;
+        if ((keynum == 8) || (keynum == 46))
+            return true;
+
+        return /\d/.test(String.fromCharCode(keynum));
+    }
 </script>
 
 </body>
