@@ -58,36 +58,61 @@
 
 <body>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="ticket" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ticket">Comprobante...</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Gracias</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Navigation -->
 <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
 <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
         <li class="sidebar-brand">
-            <a href="#top" onclick=$("#menu-close").click();>Start Bootstrap</a>
+            <a href="#top" onclick=$("#menu-close").click();  >Inicio</a>
         </li>
         <li>
             <a href="#top" onclick=$("#menu-close").click();>Inicio</a>
         </li>
         <li>
-            <a href="#about" onclick=$("#menu-close").click();>Item 1</a>
+            <a href="#item1" onclick=$("#menu-close").click();>Item 1</a>
         </li>
         <li>
-            <a href="#services" onclick=$("#menu-close").click();>Item 2</a>
+            <a href="#item2" onclick=$("#menu-close").click();>Item 2</a>
         </li>
+        <?php
+        if($tipo==1)
+        {
+         echo '<li >
+            <a href = "#item3" onclick = $("#menu-close") . click();>Item 3 </a >
+        </li >
+        <li >
+            <a href = "#item4" onclick = $("#menu-close") . click();>Item 4 </a >
+        </li >
         <li>
-            <a href="#portfolio" onclick=$("#menu-close").click();>Item 3</a>
+            <a href="#item5" onclick=$("#menu-close").click();>Item 5</a>
         </li>
-        <li>
-            <a href="#contact" onclick=$("#menu-close").click();>Item 4</a>
-        </li>
+        ';
+        }
+        ?>
 
         <li>
-            <a href="#contact2" onclick=$("#menu-close").click();>Item 5</a>
-        </li>
-
-        <li>
-            <a href="#contact3" onclick=$("#menu-close").click();>Contact</a>
+            <a href="#fin" onclick=$("#menu-close").click();>Finalizar Encuesta</a>
         </li>
     </ul>
 </nav>
@@ -103,11 +128,11 @@
         <h3 class="transparencias"  style="color: #fff;">Dirección Administrativa</h3>
         <h2  class="transparencias">Encuesta de Relevamiento</h2>
         <br>
-        <a href="#about" class="btn btn-dark btn-lg">Comenzar</a>
+        <a href="#top" class="btn btn-dark btn-lg">Comenzar</a>
     </div>
 </header>
 
-<section id="about" class="about">
+<section id="item1" class="about">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-left">
@@ -124,7 +149,7 @@
     <!-- /.container -->
 </section>
 
-<section id="services" class="services bg-info">
+<section id="item2" class="services bg-info">
     <div class="container">
         <div class="row text-left">
             <div class="col-lg-10 col-lg-offset-1">
@@ -238,7 +263,7 @@
     <!-- /.container -->
 </section>
 
-<section id="portfolio" class="portfolio">
+<section id="item3" class="portfolio">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -834,7 +859,7 @@
 
 <?php
 if($tipo==1) {
-    echo '<section id = "contact" class="map bg-success" >
+    echo '<section id = "item4" class="map bg-success" >
     <div class="container" >
         <div class="row" >
             <div class="col-lg-10 col-lg-offset-1 text-center" >
@@ -963,7 +988,7 @@ if($tipo==1) {
 
 <?php
 if($tipo==1) {
-    echo '<section id="contact2" class="map bg-danger">
+    echo '<section id="item5" class="map bg-danger">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -1091,7 +1116,7 @@ if($tipo==1) {
 
 
 
-    <section id="contact3" class="map bg-warning">
+    <section id="fin" class="map bg-warning">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -1160,9 +1185,6 @@ if($tipo==1) {
             return;
         }
 
-
-
-
         if(cant > 4 )
         {
             $(control).prop("checked", false)
@@ -1172,9 +1194,6 @@ if($tipo==1) {
         {
             cant++;
         }
-
-
-
     }
 
     function valida()
@@ -1298,7 +1317,7 @@ if($tipo==1) {
 
         if($("#tipo").val() == 1)
         {
-            if (cant < 5) {
+            if (cant < 2) {
                 alert("Hay opciones sin seleccionar en el Item 3.");
                 return false;
             }
@@ -1353,7 +1372,10 @@ if($tipo==1) {
                     if(response.estado == "true")
                     {
                         $("#cb_areaprog").empty();
-                        alert("Muchas Gracias por su respuesta.");
+
+                        $("#myModal").modal();
+                        //alert("Muchas Gracias por su respuesta.");
+
                         $('html, body').animate({
                             scrollTop: $("#top").offset().top
                         }, 1000);
@@ -1361,8 +1383,8 @@ if($tipo==1) {
 
                 },
                 error: function (error) {
-                    console.log("Error: " + error)
-                    console.dir(error);
+                    //console.log("Error: " + error)
+                    //console.dir(error);
                 }
 
             })
@@ -1387,7 +1409,7 @@ if($tipo==1) {
         },
         error: function(error)
         {
-            console.log("Error: " + error)
+            //console.log("Error: " + error)
         }
 
     })
@@ -1411,7 +1433,7 @@ if($tipo==1) {
             },
             error: function(error)
             {
-                console.log("Error: " + error)
+                //console.log("Error: " + error)
             }
 
         })
@@ -1424,8 +1446,10 @@ if($tipo==1) {
 
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
+
         e.preventDefault();
         $("#sidebar-wrapper").toggleClass("active");
+
     });
     // Opens the sidebar menu
     $("#menu-toggle").click(function(e) {
@@ -1437,10 +1461,11 @@ if($tipo==1) {
         $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
                 var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                target = target.selector;//target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
                 if (target.length) {
                     $('html,body').animate({
-                        scrollTop: target.offset().top
+                        scrollTop: $(target).offset().top + $(target).outerHeight(true)
                     }, 1000);
                     return false;
                 }
@@ -1450,7 +1475,7 @@ if($tipo==1) {
     //#to-top button appears after scrolling
     var fixed = false;
     $(document).scroll(function() {
-        if ($(this).scrollTop() > 250) {
+        if ($(this).scrollTop() < 250) {
             if (!fixed) {
                 fixed = true;
                 // $('#to-top').css({position:'fixed', display:'block'});
@@ -1472,26 +1497,7 @@ if($tipo==1) {
             }
         }
     });
-    // Disable Google Maps scrolling
-    // See http://stackoverflow.com/a/25904582/1607849
-    // Disable scroll zooming and bind back the click event
-    var onMapMouseleaveHandler = function(event) {
-        var that = $(this);
-        that.on('click', onMapClickHandler);
-        that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('iframe').css("pointer-events", "none");
-    }
-    var onMapClickHandler = function(event) {
-        var that = $(this);
-        // Disable the click handler until the user leaves the map area
-        that.off('click', onMapClickHandler);
-        // Enable scrolling zoom
-        that.find('iframe').css("pointer-events", "auto");
-        // Handle the mouse leave event
-        that.on('mouseleave', onMapMouseleaveHandler);
-    }
-    // Enable map zooming with mouse scroll when the user clicks the map
-    $('.map').on('click', onMapClickHandler);
+
 
 
     function justNumbers(e)
