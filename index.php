@@ -1467,7 +1467,7 @@ if($tipo==1) {
 
                 if (target.length)
                 {
-                    console.log(target)
+                    //console.log(target)
                     if(target !="#top") {
                         $('html,body').animate({
                             scrollTop: $(target).offset().top + $(target).outerHeight(true)
