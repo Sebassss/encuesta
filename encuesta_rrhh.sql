@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-02-2017 a las 19:40:42
+-- Tiempo de generación: 02-02-2017 a las 13:53:36
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 7.0.10
 
@@ -656,14 +656,13 @@ CREATE TABLE `datos` (
   `2b` int(11) NOT NULL,
   `2c` int(11) NOT NULL,
   `2d` int(11) NOT NULL,
+  `2e` int(11) NOT NULL,
   `3a` int(11) NOT NULL,
   `3b` int(11) NOT NULL,
   `3c` int(11) NOT NULL,
-  `3d` int(11) NOT NULL,
   `4a` int(11) NOT NULL,
   `4b` int(11) NOT NULL,
   `4c` int(11) NOT NULL,
-  `4d` int(11) NOT NULL,
   `3_op1` int(11) NOT NULL,
   `3_op2` int(11) NOT NULL,
   `3_op3` int(11) NOT NULL,
@@ -699,11 +698,15 @@ CREATE TABLE `datos` (
 -- Volcado de datos para la tabla `datos`
 --
 
-INSERT INTO `datos` (`id`, `tipo`, `zona`, `area`, `fechanac`, `sexo`, `primario`, `secundario`, `terciario`, `universitario`, `puesto`, `antiguedad`, `situacion`, `1a`, `1b`, `1c`, `1d`, `2a`, `2b`, `2c`, `2d`, `3a`, `3b`, `3c`, `3d`, `4a`, `4b`, `4c`, `4d`, `3_op1`, `3_op2`, `3_op3`, `3_op4`, `3_op5`, `3_op6`, `3_op7`, `3_op8`, `3_op9`, `3_op10`, `3_op11`, `3_op12`, `3_op13`, `3_op14`, `4_op1`, `4_op2`, `4_op3`, `4_op4`, `4_op5`, `4_op6`, `4_op7`, `4_op8`, `4_op9`, `4_op10`, `4_op11`, `4_op12`, `4_op13`, `4_op14`, `comentario`) VALUES
-(1, 1, 6, 0, '1968-05-01', 'M', 0, 0, 0, 1, 'kljdsfsdf656s5d+6f5sd64fsd4fsd4fs6d4f6sd4f6s4df6s4', 17, 0, 4, 4, 4, 4, 4, 2, 2, 2, 4, 3, 3, 3, 4, 1, 2, 3, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, '', 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 'd54gfd654fd65g4d6f54', 'lkdfghdfh54fg4h65dfgh65dfhfhdf8ghfdgh5fdhdfhgjhlhlkfdhkfjdghlkjdfhjflkjhlksfdjhlkdfsjglkdfjsgdsfgoid'),
-(2, 1, 9, 0, '1978-05-02', 'F', 1, 0, 0, 0, 'capo de todo', 0, 1, 2, 2, 1, 0, 2, 2, 1, 0, 1, 2, 4, 2, 0, 1, 2, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', ''),
-(3, 1, 4, 430, '1981-09-09', 'M', 1, 1, 1, 1, '4564', 9, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 'ghfgh', ''),
-(4, 0, 5, 432, '1981-08-08', 'F', 0, 0, 0, 1, 'jjj', 69, 1, 1, 1, 2, 2, 1, 0, 0, 0, 2, 0, 0, 0, 2, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '0', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '0', '');
+INSERT INTO `datos` (`id`, `tipo`, `zona`, `area`, `fechanac`, `sexo`, `primario`, `secundario`, `terciario`, `universitario`, `puesto`, `antiguedad`, `situacion`, `1a`, `1b`, `1c`, `1d`, `2a`, `2b`, `2c`, `2d`, `2e`, `3a`, `3b`, `3c`, `4a`, `4b`, `4c`, `3_op1`, `3_op2`, `3_op3`, `3_op4`, `3_op5`, `3_op6`, `3_op7`, `3_op8`, `3_op9`, `3_op10`, `3_op11`, `3_op12`, `3_op13`, `3_op14`, `4_op1`, `4_op2`, `4_op3`, `4_op4`, `4_op5`, `4_op6`, `4_op7`, `4_op8`, `4_op9`, `4_op10`, `4_op11`, `4_op12`, `4_op13`, `4_op14`, `comentario`) VALUES
+(1, 1, 6, 0, '1968-05-01', 'M', 0, 0, 0, 1, 'kljdsfsdf656s5d+6f5sd64fsd4fsd4fs6d4f6sd4f6s4df6s4', 17, 0, 4, 4, 4, 4, 4, 2, 2, 2, 0, 4, 3, 3, 4, 1, 2, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, '', 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 'd54gfd654fd65g4d6f54', 'lkdfghdfh54fg4h65dfgh65dfhfhdf8ghfdgh5fdhdfhgjhlhlkfdhkfjdghlkjdfhjflkjhlksfdjhlkdfsjglkdfjsgdsfgoid'),
+(2, 1, 9, 0, '1978-05-02', 'F', 1, 0, 0, 0, 'capo de todo', 0, 1, 2, 2, 1, 0, 2, 2, 1, 0, 0, 1, 2, 4, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', ''),
+(3, 1, 4, 430, '1981-09-09', 'M', 1, 1, 1, 1, '4564', 9, 0, 3, 3, 3, 3, 3, 3, 3, 3, 0, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 'ghfgh', ''),
+(4, 0, 5, 432, '1981-08-08', 'F', 0, 0, 0, 1, 'jjj', 69, 1, 1, 1, 2, 2, 1, 0, 0, 0, 0, 2, 0, 0, 2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '0', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '0', ''),
+(5, 0, 2, 440, '1983-09-12', 'F', 1, 0, 0, 0, 'nose', 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '0', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '0', 'gkjdfklgñfdgfds\r\ngdfgkljkljkghfgh'),
+(6, 0, 2, 440, '1983-09-12', 'M', 1, 1, 1, 1, 'nose', 2, 0, 3, 3, 2, 2, 3, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '0', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '0', 'fkjhsdkjhfdjkdshfsdfaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'),
+(7, 1, 1, 439, '1983-09-12', 'M', 1, 1, 1, 1, 'hola', 2, 1, 0, 0, 0, 0, 0, 1, 1, 3, 2, 0, 3, 4, 0, 3, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, '', 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 'hola'),
+(8, 1, 1, 439, '1983-09-12', 'F', 1, 1, 0, 0, 'sdhfkjsdhk', 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, '', 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '');
 
 -- --------------------------------------------------------
 
@@ -783,7 +786,7 @@ ALTER TABLE `catcentrodesaludzona`
 -- AUTO_INCREMENT de la tabla `datos`
 --
 ALTER TABLE `datos`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

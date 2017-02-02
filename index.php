@@ -209,22 +209,22 @@
                             <div class="col-sm-9">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" id="primario" name="primario" value="1">Primario
+                                        <input  onclick="javascript:cantidadSeleccionados2(this);" type="checkbox" id="primario" name="primario" value="1">Primario
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" id="secundario" name="secundario" value="1">Secundario
+                                        <input  onclick="javascript:cantidadSeleccionados2(this);" type="checkbox" id="secundario" name="secundario" value="1">Secundario
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" id="terciario" name="terciario" value="1">Terciario
+                                        <input  onclick="javascript:cantidadSeleccionados2(this);" type="checkbox" id="terciario" name="terciario" value="1">Terciario
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" id="universitario" name="universitario" value="1">Universitario
+                                        <input  onclick="javascript:cantidadSeleccionados2(this);" type="checkbox" id="universitario" name="universitario" value="1">Universitario
                                     </label>
                                 </div>
                             </div>
@@ -1154,6 +1154,29 @@ if($tipo==1) {
 <script>
 
     var cant = 1;
+    var cant_formacion = 0;
+
+    function cantidadSeleccionados2(control)
+    {
+        var x =($(control).is(':checked'))
+
+        if( x == false)
+        {
+            cant_formacion--;
+            return;
+        }
+
+        if(cant_formacion > 1 )
+        {
+            $(control).prop("checked", false)
+            alert("Ha superado el máximo permitido");
+        }
+        else
+        {
+            cant_formacion++;
+        }
+    }
+
     function cantidadSeleccionados(control)
     {
         var x =($(control).is(':checked'))
@@ -1234,12 +1257,15 @@ if($tipo==1) {
         if( typeof(sexo) == 'undefined') {alert("Seleccione tipo de sexo."); return false; }
 
 
-        if( typeof(primario) == 'undefined' ||
-            typeof(secundario) == 'undefined' ||
-            typeof(terciario) == 'undefined' ||
-            typeof(universitario) == 'undefined')
+        if( cant_formacion == 0)
         {
             alert("Seleccione al menos una opción sobre el ítem de formación.");
+            return false;
+        }
+
+        if( cant_formacion > 1)
+        {
+            alert("Seleccione solo un ítem sobre formación.");
             return false;
         }
 
