@@ -7,6 +7,7 @@
  *
  *
  */
+date_default_timezone_set('America/Argentina/San_Juan');
 
 require_once "class.conexion.php";
 $db = new Conexion();
@@ -107,11 +108,15 @@ $result = $db->query("INSERT INTO  datos (tipo,zona,area,fechanac,sexo,primario,
 
 $mensaje = "No pudo Agregar.";
 $estado = "false";
+$code = 0;
+$fecha_hora = fecha_hora(date("Y-m-d H:i:s"));
 
 if(!$result)
 {
     $mensaje = "Procesado correctamente.";
     $estado = "true";
+    $code = $db->getLastID();
+
 }
 else
 {
@@ -121,6 +126,43 @@ else
 $response = array(
     'mensaje' => $mensaje,
     'estado' => $estado,
+    'code' => $code,
+    'fecha' => $fecha_hora
 );
 
 echo json_encode($response);
+
+
+function fecha_hora($fecha)
+{
+    $dia =  date('l',strtotime($fecha));
+    if ($dia=="Monday") $dia="Lunes";
+    if ($dia=="Tuesday") $dia="Martes";
+    if ($dia=="Wednesday") $dia="Miércoles";
+    if ($dia=="Thursday") $dia="Jueves";
+    if ($dia=="Friday") $dia="Viernes";
+    if ($dia=="Saturday") $dia="Sabado";
+    if ($dia=="Sunday") $dia="Domingo";
+
+    $mes =  date('F',strtotime($fecha));
+    if ($mes=="January") $mes="Enero";
+    if ($mes=="February") $mes="Febrero";
+    if ($mes=="March") $mes="Marzo";
+    if ($mes=="April") $mes="Abril";
+    if ($mes=="May") $mes="Mayo";
+    if ($mes=="June") $mes="Junio";
+    if ($mes=="July") $mes="Julio";
+    if ($mes=="August") $mes="Agosto";
+    if ($mes=="September") $mes="Setiembre";
+    if ($mes=="October") $mes="Octubre";
+    if ($mes=="November") $mes="Noviembre";
+    if ($mes=="December") $mes="Diciembre";
+
+    $ano =  date('Y',strtotime($fecha));
+    $dia2= date('d',strtotime($fecha));
+    $hora = date('H:i',strtotime($fecha));
+    $fecha  = $dia.', '.$dia2.' de '.$mes.' de '.$ano. ' a las '.$hora;
+
+    return $fecha;
+
+}

@@ -63,16 +63,16 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="ticket">Comprobante...</h5>
+                <h5 class="modal-title" id="ticket">Encuesta de Relevamiento - Dirección administrativa</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                ...
+
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Gracias</button>
+                <button id="btnGracias" type="button" class="btn btn-primary">Gracias</button>
             </div>
         </div>
     </div>
@@ -85,9 +85,6 @@
         <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
         <li class="sidebar-brand">
             <a href="#top" onclick=$("#menu-close").click();  >Inicio</a>
-        </li>
-        <li>
-            <a href="#top" onclick=$("#menu-close").click();>Inicio</a>
         </li>
         <li>
             <a href="#item1" onclick=$("#menu-close").click();>Item 1</a>
@@ -1127,8 +1124,8 @@ if($tipo==1) {
 
                 <form id="5" name="5">
                 <div class="form-group">
-                    <label for="comment">Comentarios: (max: 100 caracteres)</label>
-                    <textarea  maxlength="100" name="comentario" id="comentario" class="form-control" rows="7"></textarea>
+                    <label for="comment">Comentarios: (max: 500 caracteres / 5 Líneas)</label>
+                    <textarea  maxlength="500" name="comentario" id="comentario" class="form-control" rows="7"></textarea>
                 </div>
                 </form>
             </div>
@@ -1373,12 +1370,9 @@ if($tipo==1) {
                     {
                         $("#cb_areaprog").empty();
 
+                        $("#myModal").find(".modal-body").append("<h3>Muchas gracias por su colaboración.!</h3><p> código comprobante: "+response.code+"</p><p>"+response.fecha+"</p>");
                         $("#myModal").modal();
                         //alert("Muchas Gracias por su respuesta.");
-
-                        $('html, body').animate({
-                            scrollTop: $("#top").offset().top
-                        }, 1000);
                     }
 
                 },
@@ -1391,6 +1385,14 @@ if($tipo==1) {
         }
     });
 
+    $("#btnGracias").on('click', function()
+    {
+        $('#myModal').modal('hide');
+        $('html, body').animate({
+            scrollTop: $("#top").offset().top
+        }, 1000);
+
+    })
 
 
     $.ajax({
@@ -1463,10 +1465,20 @@ if($tipo==1) {
                 var target = $(this.hash);
                 target = target.selector;//target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: $(target).offset().top + $(target).outerHeight(true)
-                    }, 1000);
+                if (target.length)
+                {
+                    console.log(target)
+                    if(target !="#top") {
+                        $('html,body').animate({
+                            scrollTop: $(target).offset().top + $(target).outerHeight(true)
+                        }, 1000);
+                    }
+                    else
+                    {
+                        $('html,body').animate({
+                            scrollTop: $(target).offset().top
+                        }, 1000);
+                    }
                     return false;
                 }
             }
@@ -1499,6 +1511,12 @@ if($tipo==1) {
     });
 
 
+
+    $(document).ready(function(){
+        $('html,body').animate({
+            scrollTop: $("#top").offset().top
+        }, 1000);
+    });
 
     function justNumbers(e)
     {

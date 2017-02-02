@@ -30,6 +30,10 @@ class Conexion {
     * funcion que ejecuta una consulta sql
     * @param $Sql
     */
+    public function getLastID(){
+        return mysqli_insert_id($this->conexion);
+    }
+
     public function query($sql){
        $this->consulta =  mysqli_query($this->conexion,$sql);
         return mysqli_error($this->conexion);
