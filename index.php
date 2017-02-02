@@ -6,7 +6,7 @@
     if(isset($_GET['tipo']))
     {
         $tipo = $_GET['tipo'];
-        if($tipo>1)
+        if($tipo>0)
         {
             $tipo=1;
         }
@@ -19,7 +19,8 @@
         die;
     }
 
-    echo '<input  type="hidden" id="tipo" name = "tipo" value = "'.$tipo.'" >';
+    //echo $tipo;
+    //echo '<input  type="hidden" id="tipo" name = "tipo" value = "'.$tipo.'" >';
 ?>
 
 
@@ -28,15 +29,18 @@
 
 <head>
 
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Encuesta de Relevamiento</title>
 
     <!-- Bootstrap Core CSS -->
+
+
+
     <link href="framework/css/bootstrap.min.css" rel="stylesheet">
     <link href="framework/datepicker/css/bootstrap-datepicker.min.css">
 
@@ -54,11 +58,17 @@
     <script src="framework/js/respond.min.js"></script>
     <![endif]-->
 
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+    <link rel="icon" type="image/png" href="ico/favicon.png" />
+
+
 </head>
 
 <body>
-
-<!-- Modal -->
+<?php
+    echo '<input  type="hidden" id="tipo" name = "tipo" value = "'.$tipo.'" >';
+?>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="ticket" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -125,7 +135,7 @@
         <h3 class="transparencias"  style="color: #fff;">Dirección Administrativa</h3>
         <h2  class="transparencias">Encuesta de Relevamiento</h2>
         <br>
-        <a href="#top" class="btn btn-dark btn-lg">Comenzar</a>
+        <a href="#item1" class="btn btn-dark btn-lg">Comenzar</a>
     </div>
 </header>
 
@@ -195,7 +205,7 @@
                             </div>
                         </div> <!-- /.form-group -->
                         <div class="form-group">
-                            <label class="control-label col-sm-3">Formación</label>
+                            <label class="control-label col-sm-3">Formación( última finalizada )</label>
                             <div class="col-sm-9">
                                 <div class="checkbox">
                                     <label>
@@ -314,7 +324,7 @@
                                 <thead>
                                 <tr>
                                     <th class="text-center">Respecto a mi puesto</th>
-                                    <th class="text-center">0</th>
+                                    <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
                                     <th class="text-center">2</th>
                                     <th class="text-center">3</th>
@@ -448,7 +458,7 @@
                                 <thead>
                                 <tr>
                                     <th class="text-center">Respecto a mi Jefe o Superior</th>
-                                    <th class="text-center">0</th>
+                                    <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
                                     <th class="text-center">2</th>
                                     <th class="text-center">3</th>
@@ -459,7 +469,7 @@
 
                                 <!--Pregunta 1-->
                                 <tr>
-                                    <td>Tengo conocimientos especificos sobre cuales son mis tareas y funciones.</td>
+                                    <td>Identifico claramente quien es mi Jefe o Superior.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="2a" value="0">
@@ -488,7 +498,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td>Conozco los objetivos funciones y procesos que tiene el área en la que me desempeño.</td>
+                                    <td>Encuentro apoyo y confianza en mi Jefe o Superior para el desarrollo de mis actividades.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="2b" value="0">
@@ -517,7 +527,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td>Conozco con claridad sobre cuales son los resultados que se espera de mi colaboración.</td>
+                                    <td>Mi Jefe o Superior me imparte funciones y tareas de manera clara.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="2c" value="0">
@@ -546,7 +556,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td>Me siento a gusto con las tareas y funciones que realizo.</td>
+                                    <td>Tengo un excelente Jefe/Superior.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="2d" value="0">
@@ -573,6 +583,34 @@
                                         </label>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>Mi Jefe o Superior me alienta a proponer nuevas ideas o escucha mis sugerencias .</td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="2e" value="0">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="2e" value="1">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="2e" value="2">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="2e" value="3">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="2e" value="4">
+                                        </label>
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
 
@@ -580,7 +618,7 @@
                                 <thead>
                                 <tr>
                                     <th class="text-center">Respecto Medioambiente de trabajo</th>
-                                    <th class="text-center">0</th>
+                                    <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
                                     <th class="text-center">2</th>
                                     <th class="text-center">3</th>
@@ -591,7 +629,7 @@
 
                                 <!--Pregunta 1-->
                                 <tr>
-                                    <td>Tengo conocimientos especificos sobre cuales son mis tareas y funciones.</td>
+                                    <td>Cuento con las herramientas e instrumentos necesarios para poder realizar mi trabajo adecuadamente.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="3a" value="0">
@@ -620,7 +658,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td>Conozco los objetivos funciones y procesos que tiene el área en la que me desempeño.</td>
+                                    <td>Mi lugar de trabajose encuentra limpio y ordenado.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="3b" value="0">
@@ -649,7 +687,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td>Conozco con claridad sobre cuales son los resultados que se espera de mi colaboración.</td>
+                                    <td>Trabajo en un ambiente amigable y de trato cordial.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="3c" value="0">
@@ -677,35 +715,6 @@
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <td>Me siento a gusto con las tareas y funciones que realizo.</td>
-                                    <td class="text-center">
-                                        <label class="radio-inline">
-                                            <input type="radio"  name="3d" value="0">
-                                        </label>
-                                    </td>
-                                    <td class="text-center">
-                                        <label class="radio-inline">
-                                            <input type="radio"  name="3d" value="1">
-                                        </label>
-                                    </td>
-                                    <td class="text-center">
-                                        <label class="radio-inline">
-                                            <input type="radio"  name="3d" value="2">
-                                        </label>
-                                    </td>
-                                    <td class="text-center">
-                                        <label class="radio-inline">
-                                            <input type="radio"  name="3d" value="3">
-                                        </label>
-                                    </td>
-                                    <td class="text-center">
-                                        <label class="radio-inline">
-                                            <input type="radio"  name="3d" value="4">
-                                        </label>
-                                    </td>
-                                </tr>
-
 
                                 </tbody>
                             </table>
@@ -714,7 +723,7 @@
                                 <thead>
                                 <tr>
                                     <th class="text-center">Respecto a la comunicación</th>
-                                    <th class="text-center">0</th>
+                                    <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
                                     <th class="text-center">2</th>
                                     <th class="text-center">3</th>
@@ -725,7 +734,7 @@
 
                                 <!--Pregunta 1-->
                                 <tr>
-                                    <td>Tengo conocimientos especificos sobre cuales son mis tareas y funciones.</td>
+                                    <td>Cuento con la información necesaria para desarrollar mi trabajo eficientemente.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="4a" value="0">
@@ -754,7 +763,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td>Conozco los objetivos funciones y procesos que tiene el área en la que me desempeño.</td>
+                                    <td>La información de interés es comunicada oportunamente.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="4b" value="0">
@@ -783,7 +792,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td>Conozco con claridad sobre cuales son los resultados que se espera de mi colaboración.</td>
+                                    <td>Tengo fácil acceso a novedades y comunicaciones que se realizan a nivel central.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="4c" value="0">
@@ -811,34 +820,7 @@
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <td>Me siento a gusto con las tareas y funciones que realizo.</td>
-                                    <td class="text-center">
-                                        <label class="radio-inline">
-                                            <input type="radio"  name="4d" value="0">
-                                        </label>
-                                    </td>
-                                    <td class="text-center">
-                                        <label class="radio-inline">
-                                            <input type="radio"  name="4d" value="1">
-                                        </label>
-                                    </td>
-                                    <td class="text-center">
-                                        <label class="radio-inline">
-                                            <input type="radio"  name="4d" value="2">
-                                        </label>
-                                    </td>
-                                    <td class="text-center">
-                                        <label class="radio-inline">
-                                            <input type="radio"  name="4d" value="3">
-                                        </label>
-                                    </td>
-                                    <td class="text-center">
-                                        <label class="radio-inline">
-                                            <input type="radio"  name="4d" value="4">
-                                        </label>
-                                    </td>
-                                </tr>
+
 
 
                                 </tbody>
@@ -1124,8 +1106,8 @@ if($tipo==1) {
 
                 <form id="5" name="5">
                 <div class="form-group">
-                    <label for="comment">Comentarios: (max: 500 caracteres / 5 Líneas)</label>
-                    <textarea  maxlength="500" name="comentario" id="comentario" class="form-control" rows="7"></textarea>
+                    <label for="comment">Comentarios: (max: 1500 caracteres / 15 Líneas)</label>
+                    <textarea  maxlength="1500" name="comentario" id="comentario" class="form-control" rows="7"></textarea>
                 </div>
                 </form>
             </div>
@@ -1214,16 +1196,16 @@ if($tipo==1) {
         var b2 = $('input[name=2b]:checked').val();
         var c2 = $('input[name=2c]:checked').val();
         var d2 = $('input[name=2d]:checked').val();
+        var e2 = $('input[name=2d]:checked').val();
 
         var a3 = $('input[name=3a]:checked').val();
         var b3 = $('input[name=3b]:checked').val();
         var c3 = $('input[name=3c]:checked').val();
-        var d3 = $('input[name=3d]:checked').val();
 
         var a4 = $('input[name=4a]:checked').val();
         var b4 = $('input[name=4b]:checked').val();
         var c4 = $('input[name=4c]:checked').val();
-        var d4 = $('input[name=4d]:checked').val();
+
 
         //3
         //compruebo mediante cant. seleccionados
@@ -1252,9 +1234,9 @@ if($tipo==1) {
         if( typeof(sexo) == 'undefined') {alert("Seleccione tipo de sexo."); return false; }
 
 
-        if( typeof(primario) == 'undefined' &&
-            typeof(secundario) == 'undefined' &&
-            typeof(terciario) == 'undefined' &&
+        if( typeof(primario) == 'undefined' ||
+            typeof(secundario) == 'undefined' ||
+            typeof(terciario) == 'undefined' ||
             typeof(universitario) == 'undefined')
         {
             alert("Seleccione al menos una opción sobre el ítem de formación.");
@@ -1287,7 +1269,8 @@ if($tipo==1) {
         if( typeof(a2) == 'undefined' ||
             typeof(b2) == 'undefined' ||
             typeof(c2) == 'undefined' ||
-            typeof(d2) == 'undefined')
+            typeof(d2) == 'undefined' ||
+            typeof(e2) == 'undefined')
         {
             alert("Hay opciones sin seleccionar en el Item 2.");
             return false;
@@ -1295,8 +1278,7 @@ if($tipo==1) {
 
         if( typeof(a3) == 'undefined' ||
             typeof(b3) == 'undefined' ||
-            typeof(c3) == 'undefined' ||
-            typeof(d3) == 'undefined')
+            typeof(c3) == 'undefined' )
         {
             alert("Hay opciones sin seleccionar en el Item 2.");
             return false;
@@ -1304,8 +1286,7 @@ if($tipo==1) {
 
         if( typeof(a4) == 'undefined' ||
             typeof(b4) == 'undefined' ||
-            typeof(c4) == 'undefined' ||
-            typeof(d4) == 'undefined')
+            typeof(c4) == 'undefined' )
         {
             alert("Hay opciones sin seleccionar en el Item 2.");
             return false;
@@ -1314,7 +1295,7 @@ if($tipo==1) {
 
         if($("#tipo").val() == 1)
         {
-            if (cant < 2) {
+            if (cant < 5) {
                 alert("Hay opciones sin seleccionar en el Item 3.");
                 return false;
             }
@@ -1370,7 +1351,7 @@ if($tipo==1) {
                     {
                         $("#cb_areaprog").empty();
 
-                        $("#myModal").find(".modal-body").append("<h3>Muchas gracias por su colaboración.!</h3><p> código comprobante: "+response.code+"</p><p>"+response.fecha+"</p>");
+                        $("#myModal").find(".modal-body").append("<h3>Muchas gracias por su colaboración, es muy valiosa para el MPS.!</h3><p> código comprobante: "+response.code+"</p><p>"+response.fecha+"</p>");
                         $("#myModal").modal();
                         //alert("Muchas Gracias por su respuesta.");
                     }
