@@ -147,7 +147,7 @@
                 <h3>
                     <i>La encuesta es una técnica para el relevamiento de datos. Permitirá conocer su opinión respecto de su puesto y lugar de trabajo. Para ello es fundamental que le brinde la mayor importancia y honestidad es sus respuestas ya que estos datos nos servirán para evaluar alternativas de solución y pensar en estrategias que puedan mejorar su labor diaria.
                     <b>Esta encuesta es <u>anónima</u></b> y no persigue otro objetivo final y general más  que mejorar el trabajo de todos los colaboradores del Ministerio de Salud Pública.</i>
-                    <input  onclick="javascript:cantidadSeleccionados2(this);" type="checkbox" id="primario" name="primario" value="1"><u>He leido el enunciado.</u>
+                    <input  type="checkbox" id="leido" name="leido" value="1"><u>He leido este enunciado.</u>
                 </h3>
         </div>
         <!-- /.row -->
@@ -238,9 +238,19 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="firstName" class="col-sm-3 control-label">Antiguedad(en años cumplidos)</label>
+                            <label for="firstName" class="col-sm-3 control-label">Antiguedad en MSP(en años cumplidos)</label>
                             <div class="col-sm-9">
                                 <input type="text" maxlength="2" onkeypress="return justNumbers(event);" id="antiguedad" name="antiguedad" value="" placeholder="Antiguedad en años" class="form-control" autofocus>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label  class="col-sm-3 control-label">Planta Permanente</label>
+                            <div class="col-sm-9">
+                                <input type="radio"  name="situacion_trabajo" value="0" class="form-control" autofocus>
                             </div>
                         </div>
 
@@ -248,14 +258,6 @@
                             <label for="firstName" class="col-sm-3 control-label">Contratado</label>
                             <div class="col-sm-9" >
                                 <input type="radio"  name="situacion_trabajo" value="1"  class="form-control" autofocus>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-
-                            <label  class="col-sm-3 control-label">Planta Permanente</label>
-                            <div class="col-sm-9">
-                                <input type="radio"  name="situacion_trabajo" value="0" class="form-control" autofocus>
                             </div>
                         </div>
 
@@ -1201,6 +1203,7 @@ if($tipo==1) {
     function valida()
     {
 
+        var leido = $('input[name=leido]:checked').val();
         //1
         var sexo = $('input[name=sexo]:checked').val();
         var primario = $('input[name=primario]:checked').val();
@@ -1251,8 +1254,10 @@ if($tipo==1) {
 
 
 
+        if( typeof(leido) == 'undefined') {alert("Indique si ha leido el enunciado."); return false; }
 
         if( $("#cb_zona").val()==0) {alert("Seleccione una zona sanitaria."); return false; }
+        if( $("#cb_areaprog").val()==0) {alert("Seleccione un área programática."); return false; }
         if( $("#fechanac").val()=="") {alert("Proporcione una fecha de nacimiento."); return false; }
         if( typeof(sexo) == 'undefined') {alert("Seleccione tipo de sexo."); return false; }
 
@@ -1280,6 +1285,7 @@ if($tipo==1) {
             alert("Indique su antiguedad.");
             return false;
         }
+
 
         if( typeof(siatuacion) == 'undefined') {alert("Indique su situación laboral."); return false; }
 
