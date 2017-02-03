@@ -133,9 +133,10 @@
             </div>
         </h1>
         <h3 class="transparencias"  style="color: #fff;">Dirección Administrativa</h3>
+        <h3 class="transparencias"><b>Dpto. de Gestión de RRHH.</b></h3>
         <h2  class="transparencias">Encuesta de Relevamiento</h2>
         <br>
-        <a href="#item1" class="btn btn-dark btn-lg">Comenzar</a>
+        <a href="#top" class="btn btn-dark btn-lg">Comenzar</a>
     </div>
 </header>
 
@@ -144,15 +145,14 @@
         <div class="row">
             <div class="col-lg-12 text-left">
                 <h3>
-                    La encuesta es una técnica para el relevamiento de datos. Esta encuesta permitirá conocer su opinión respecto de su
-                    puesto y lugar de trabajo. Para ello es fundamental que le brinde la mayor importancia y honestidad es sus respuestas
-                    ya que estos datos nos serviran para evaluar alternativas de solución y pensar en estrategias que puedan mejorar su labor
-                    diaria.
+                    <i>La encuesta es una técnica para el relevamiento de datos. Permitirá conocer su opinión respecto de su puesto y lugar de trabajo. Para ello es fundamental que le brinde la mayor importancia y honestidad es sus respuestas ya que estos datos nos servirán para evaluar alternativas de solución y pensar en estrategias que puedan mejorar su labor diaria.
+                    <b>Esta encuesta es <u>anónima</u></b> y no persigue otro objetivo final y general más  que mejorar el trabajo de todos los colaboradores del Ministerio de Salud Pública.</i>
+                    <input  onclick="javascript:cantidadSeleccionados2(this);" type="checkbox" id="primario" name="primario" value="1"><u>He leido el enunciado.</u>
                 </h3>
-            </div>
         </div>
         <!-- /.row -->
     </div>
+        </div>
     <!-- /.container -->
 </section>
 
@@ -1470,14 +1470,14 @@ if($tipo==1) {
         $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
                 var target = $(this.hash);
-                target = target.selector;//target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
                 if (target.length)
                 {
                     //console.log(target)
                     if(target !="#top") {
                         $('html,body').animate({
-                            scrollTop: $(target).offset().top + $(target).outerHeight(true)
+                            scrollTop: $(target).offset().top + $(target).outerHeight(false)
                         }, 1000);
                     }
                     else
@@ -1494,7 +1494,7 @@ if($tipo==1) {
     //#to-top button appears after scrolling
     var fixed = false;
     $(document).scroll(function() {
-        if ($(this).scrollTop() < 250) {
+        if ($(this).scrollTop() > 250) {
             if (!fixed) {
                 fixed = true;
                 // $('#to-top').css({position:'fixed', display:'block'});
