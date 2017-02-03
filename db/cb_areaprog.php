@@ -10,7 +10,7 @@ require_once "class.conexion.php";
 
 $db = new Conexion();
 $zonaId = $_POST['cszId'];
-$consulta = $db->query("select t.depId,t.depNombre from catDepartamento t left join enlZonaDepartamento e on e.depId = t.depId where cszId ='$zonaId'");
+$consulta = $db->query("select t.depId,t.depNombre from catdepartamento t left join enlzonadepartamento e on e.depId = t.depId where cszId ='$zonaId'");
 
 $i=0;
 $x = array();

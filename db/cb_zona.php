@@ -10,7 +10,7 @@ require_once "class.conexion.php";
 
 $db = new Conexion();
 
-$consulta = $db->query("select cszId, cszNombre from catCentroDeSaludZona");
+$consulta = $db->query("select cszId, cszNombre from catcentrodesaludzona");
 
 $i=0;
 $x = array();

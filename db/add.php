@@ -35,9 +35,9 @@ $params_2 = array();
 parse_str($_POST['2'], $params_2);
 
 $a1 = !isset($params_2['1a']) ? 0 : $params_2['1a'];
-$a2 = !isset($params_2['2a']) ? 0 : $params_2['1b'];
-$a3 = !isset($params_2['3a']) ? 0 : $params_2['1c'];
-$a4 = !isset($params_2['4a']) ? 0 : $params_2['1d'];
+$a2 = !isset($params_2['2a']) ? 0 : $params_2['2a'];
+$a3 = !isset($params_2['3a']) ? 0 : $params_2['3a'];
+$a4 = !isset($params_2['4a']) ? 0 : $params_2['4a'];
 
 $b1 = !isset($params_2['1b']) ? 0 : $params_2['1b'];
 $b2 = !isset($params_2['2b']) ? 0 : $params_2['2b'];
