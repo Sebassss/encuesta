@@ -69,14 +69,14 @@
 <?php
     echo '<input  type="hidden" id="tipo" name = "tipo" value = "'.$tipo.'" >';
 ?>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="ticket" aria-hidden="true">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="ticket" aria-hidden="true" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="ticket">Encuesta de Relevamiento - Dirección administrativa</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <h5 class="modal-title" id="ticket"><b>Encuesta de Relevamiento - Dirección administrativa</b></h5>
+<!--                <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                    <span aria-hidden="true">&times;</span>-->
+<!--                </button>-->
             </div>
             <div class="modal-body">
 
@@ -187,23 +187,24 @@
                                 <input type="date"  id="fechanac" name="fechanac" class="form-control">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div  class="form-group">
                             <label class="control-label col-sm-3">Sexo</label>
                             <div class="col-sm-6">
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <label class="radio-inline">
                                             <input type="radio"  name="sexo" value="F">Femenino
-                                        </label>
-                                    </div>
+                                            </label>
+                                        </div>
                                     <div class="col-sm-4">
                                         <label class="radio-inline">
                                             <input type="radio"  name="sexo" value="M">Masculino
-                                        </label>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div> <!-- /.form-group -->
+                        <!-- /.form-group -->
                         <div class="form-group">
                             <label class="control-label col-sm-3">Formación( última finalizada )</label>
                             <div class="col-sm-9">
@@ -250,14 +251,14 @@
 
                             <label  class="col-sm-3 control-label">Planta Permanente</label>
                             <div class="col-sm-9">
-                                <input type="radio"  name="situacion_trabajo" value="0" class="form-control" autofocus>
+                                <input id="pp" type="radio" onclick="add_options();"  name="situacion_trabajo" value="0" class="form-control" autofocus>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="firstName" class="col-sm-3 control-label">Contratado</label>
                             <div class="col-sm-9" >
-                                <input type="radio"  name="situacion_trabajo" value="1"  class="form-control" autofocus>
+                                <input type="radio" onclick="add_options();" name="situacion_trabajo" value="1"  class="form-control" autofocus>
                             </div>
                         </div>
 
@@ -1156,7 +1157,84 @@ if($tipo==1) {
 <script>
 
     var cant = 1;
-    var cant_formacion = 0;
+    var cant_formacion = 1;
+
+    function add_options2()
+    {
+        var op_ley = '<div style="margin:0 !important; border: solid 1px #ccc; border-radius: 8px;" id="op_ley" class="form-group">'+
+            '<label class="control-label col-sm-4">Indique en que categoria encuadra mejor sus funciones.</label>'+
+            '<div class="col-sm-8">'+
+            '<div class="row">'+
+            '<div class="col-sm-4">'+
+            '<label class="radio-inline">'+
+            '<input type="radio"  name="cat" value="1">Servicios Generales / Maestranza'+
+            '</label>'+
+            '</div>'+
+            '<div class="col-sm-4">'+
+            '<label class="radio-inline">'+
+            '<input type="radio"  name="cat" value="2">Funciones Administrativas'+
+            '</label>'+
+            '</div>'+
+            '<div class="col-sm-4">'+
+            '<label class="radio-inline">'+
+            '<input type="radio"  name="cat" value="3">Responsable o Jefe de Sector/Área con personal a cargo'+
+            '</label>'+
+            '</div>'+
+            '</div>'+
+            '</div>'+
+            '</div>';
+
+        if($('input[name=ley]:checked').val() == "1")
+        {
+            if(typeof($("#op_ley").val()) == 'undefined')
+            {
+                $('#ley').append(op_ley);
+            }
+        }
+        else
+        {
+            $("#op_ley").remove();
+        }
+    }
+
+    function add_options()
+    {
+
+
+
+        var ley = '<div style="margin:0 !important; border: solid 1px #ccc; border-radius: 8px;" id="ley" class="form-group">'+
+            '<label class="control-label col-sm-4">Ley</label>'+
+        '<div class="col-sm-8">'+
+        '<div class="row">'+
+        '<div class="col-sm-4">'+
+        '<label class="radio-inline">'+
+        '<input type="radio"  onclick="add_options2();"  name="ley" value="0">71Q'+
+        '</label>'+
+        '</div>'+
+        '<div class="col-sm-4">'+
+        '<label class="radio-inline">'+
+        '<input type="radio"  onclick="add_options2();" name="ley" value="1">1148Q'+
+        '</label>'+
+        '</div>'+
+        '</div>'+
+        '</div>'+
+        '</div>';
+
+
+
+
+        if($('input[name=situacion_trabajo]:checked').val() == "0")
+        {
+            if(typeof($("#ley").val()) == 'undefined')
+            {
+                $('#pp').after(ley);
+            }
+        }
+        else
+        {
+            $("#ley").remove();
+        }
+    }
 
     function cantidadSeleccionados2(control)
     {
@@ -1212,6 +1290,21 @@ if($tipo==1) {
         var universitario = $('input[name=universitario]:checked').val();
         var siatuacion = $('input[name=situacion_trabajo]:checked').val();
 
+        var ley =$('input[name=ley]:checked').val();
+        var op_ley =$('input[name=cat]:checked').val();
+
+        if(siatuacion == "0" && typeof(ley) == 'undefined')
+        {
+            alert("Seleccione una ley, en situación laboral")
+            return false;
+        }
+
+        if(ley == "1" && typeof(op_ley) == 'undefined')
+        {
+            alert("Seleccione una categoría acorde a sus funciones, en situación laboral")
+            return false;
+        }
+
         //2
         var a1 = $('input[name=1a]:checked').val();
         var b1 = $('input[name=1b]:checked').val();
@@ -1262,13 +1355,13 @@ if($tipo==1) {
         if( typeof(sexo) == 'undefined') {alert("Seleccione tipo de sexo."); return false; }
 
 
-        if( cant_formacion == 0)
+        if( cant_formacion <= 1)
         {
             alert("Seleccione al menos una opción sobre el ítem de formación.");
             return false;
         }
 
-        if( cant_formacion > 1)
+        if( cant_formacion > 2)
         {
             alert("Seleccione solo un ítem sobre formación.");
             return false;
@@ -1288,6 +1381,8 @@ if($tipo==1) {
 
 
         if( typeof(siatuacion) == 'undefined') {alert("Indique su situación laboral."); return false; }
+
+
 
         if( typeof(a1)  == 'undefined' ||
             typeof(b1) == 'undefined' ||
@@ -1381,10 +1476,19 @@ if($tipo==1) {
 
                     if(response.estado == "true")
                     {
-                        $("#cb_areaprog").empty();
 
+
+                        cant = 1;
+                        cant_formacion = 1;
+                        $("#cb_areaprog").empty();
+                        $("#ley").remove();
                         $("#myModal").find(".modal-body").append("<h3>Muchas gracias por su colaboración, es muy valiosa para el MPS.!</h3><p> código comprobante: "+response.code+"</p><p>"+response.fecha+"</p>");
                         $("#myModal").modal();
+
+                        setTimeout(function(){
+                            window.location.reload();
+                        },10000);
+
                         //alert("Muchas Gracias por su respuesta.");
                     }
 
@@ -1401,9 +1505,12 @@ if($tipo==1) {
     $("#btnGracias").on('click', function()
     {
         $('#myModal').modal('hide');
-        $('html, body').animate({
-            scrollTop: $("#top").offset().top
-        }, 1000);
+//        $('html, body').animate({
+//            scrollTop: $("#top").offset().top
+//        }, 1000);
+
+        window.location.reload();
+
 
     })
 
