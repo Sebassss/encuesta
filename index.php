@@ -953,7 +953,7 @@ if($tipo==1) {
                         <td > Otros(Describa)</td >
                         <td >
                             <label class="radio-inline" >
-                                <input maxlength="20" type = "text" id = "Option_14" name = "Option_14" >
+                                <input maxlength="20" type = "text" id = "Option_14" placeholder="Otro" name = "Option_14" >
                             </label >
                         </td >
                     </tr >
@@ -1081,7 +1081,7 @@ if($tipo==1) {
                         <td>Otros (Describa)</td>
                         <td>
                             <label class="radio-inline">
-                                <input maxlength="20" type="text" id="Option_14" name="Option_14" >
+                                <input maxlength="20" type="text" id="Option_14" placeholder="Otro" name="Option_14" >
                             </label>
                         </td>
                     </tr>
