@@ -1130,7 +1130,7 @@ if($tipo==1) {
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <h4>
                     Su colaboración es muy valiosa para nosotros.<br>
-                    <strong>Gestión de RRHH - MSP</strong>
+                    <strong>Gestión de RRHH. - MSP</strong>
                 </h4>
                 <p>Argentina
                     <br>San Juan</p>

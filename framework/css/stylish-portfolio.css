@@ -223,6 +223,7 @@ hr.small {
 
 .services {
     padding: 50px 0;
+
 }
 
 .service-item {
@@ -274,7 +275,8 @@ hr.small {
 /* Map */
 
 .map {
-    height: 500px;
+    height: auto;
+
 }
 
 @media(max-width:768px) {
