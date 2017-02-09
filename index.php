@@ -129,11 +129,12 @@
     <div class="text-vertical-center">
         <h1 style="text-align: center" >
             <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12">
-                <img style=" margin: 0 auto;background-color: #fff" class="img-responsive img-rounded" src="framework/img/logo.png">
+                <img style=" margin: 0 auto;background-color: #fff;" class="img-responsive img-rounded" src="framework/img/logo.png">
             </div>
+
         </h1>
-        <br>
-        <h3 class="transparencias"  style="color: #fff;">Encuesta de Diagnóstico Organizacional</h3>
+
+        <h2 class="transparencias"  style=" color: #fff; margin-top: 50px;">Encuesta de Diagnóstico Organizacional</h2>
         <h3 class="transparencias"><b>Gestión de RRHH | <span style="color:#ccc"> Dirección Administrativa</span> </b></h3>
         <br>
         <a href="#top" class="btn btn-dark btn-lg">Comenzar</a>
@@ -144,7 +145,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-left">
-                <h2><?php echo ($tipo==0 ) ? 'Encuesta para Agentes' : 'Encuesta para Agentes con Personal a Cargo' ?></h2>
+                <h2 class="titulo_preg"><?php echo ($tipo==0 ) ? 'Encuesta para Agentes' : 'Encuesta para Agentes con Personal a Cargo' ?></h2>
                 <h4>
 
                     <i>La encuesta es una técnica para el relevamiento de datos. Permitirá conocer su opinión respecto de su puesto y lugar de trabajo. Para ello es fundamental que le brinde la mayor importancia y honestidad a sus respuestas ya que estos datos nos servirán para evaluar alternativas de solución y pensar en estrategias que puedan mejorar su labor diaria.
@@ -165,7 +166,7 @@
     <div class="container">
         <div class="row text-left">
             <div class="col-lg-10 col-lg-offset-1">
-                <h2> 1 - Responda los siguientes campos y seleccione el que corresponda.</h2>
+                <h2 class="titulo_preg"> 1 - Responda los siguientes campos y seleccione el que corresponda.</h2>
                 <hr class="small">
                 <div class="col-lg-12" >
                     <form id="1" name="1" class="form-horizontal" role="form">
@@ -174,10 +175,10 @@
                             <label for="country" class="col-sm-3 control-label">Zona Sanitaria</label>
                             <div class="col-sm-9">
                                 <select name="cb_zona" id="cb_zona" class="form-control">
-                                    <option value="0" selected>Seleccione...</option>
+                                    <option value="0" selected="">Seleccione...</option>
                                 </select>
                             </div>
-                        </div> <!-- /.form-group -->
+                        </div>
                         <div class="form-group">
                             <label for="country" class="col-sm-3 control-label">Area Programática</label>
                             <div class="col-sm-9">
@@ -282,7 +283,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h2>2 - Para cada afirmación marque la casilla correspondiente al numero que mejor identifica su opinion.</h2>
+                <h2 class="titulo_preg">2 - Para cada afirmación marque la casilla correspondiente al numero que mejor identifica su opinion.</h2>
                 <hr class="small">
                 <div class="row ">
                     <div class="col-md-3"></div>
@@ -850,7 +851,7 @@ if($tipo==1) {
     <div class="container" >
         <div class="row" >
             <div class="col-lg-10 col-lg-offset-1 text-center" >
-                <h2 >
+                <h2 class="titulo_preg" >
     3 - Que temas de los de abajo enumerados serían de prioridad para capacitar a los colaboradores de su equipo .
     Por favor seleccione solo <b>4</b > de los que considere mas relevantes .
                 </h2 >
@@ -973,14 +974,12 @@ if($tipo==1) {
 }
 ?>
 
-<?php
-if($tipo==1) {
-    echo '<section id="item5" class="map bg-danger">
+<section id="item5" class="map bg-danger">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h2>
-                    4 - Seleccione las capacitaciones que le ayudarían a Ud. a mejorar su desempeño:
+                <h2 class="titulo_preg">
+                    <?php if($tipo==1) { echo '4'; }else{echo '3';}?> - Seleccione las capacitaciones que le ayudarían a Ud. a mejorar su desempeño:
                 </h2>
                 <form id="4" name="4">
                 <table class="table table-striped" style="border: 1px solid #000">
@@ -1097,9 +1096,7 @@ if($tipo==1) {
             </div>
         </div>
     </div>
-</section>';
-}
-?>
+</section>
 
 
 
@@ -1107,8 +1104,8 @@ if($tipo==1) {
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h2>
-                    <?php if($tipo==1) { echo '5'; }else{echo '3';}?> - Por favor, en las siguientes lineas escriba comentarios,
+                <h2 class="titulo_preg">
+                    <?php if($tipo==1) { echo '5'; }else{echo '4';}?> - Por favor, en las siguientes lineas escriba comentarios,
                     opiniones, aclaraciones o sugerencias en torno a los temas planteados en esta encuesta.
                 </h2>
 
@@ -1121,10 +1118,18 @@ if($tipo==1) {
             </div>
         </div>
     </div>
+
+        <div class="col-md-12 text-center">
+        <h4>
+            Gracias por su colaboración, su opinión es muy valiosa.<br>
+            <strong>Gestión de RRHH - MSP</strong>
+        </h4>
+        </div>
+
 </section>
 
-<div class="col-md-12">
-    <div class="row text-center">
+<div class="col-md-12" style="margin-top: 90px">
+    <div class="row text-center" style="margin-bottom: 90px">
         <div id="fin_encuesta" class="btn btn-primary">Finalizar encuesta</div>
     </div>
 </div>
@@ -1133,10 +1138,7 @@ if($tipo==1) {
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h4>
-                    Gracias por su colaboración, su opinión es muy valiosa.<br>
-                    <strong>Gestión de RRHH - MSP</strong>
-                </h4>
+
                 <p>Argentina
                     <br>San Juan</p>
                 <ul class="list-unstyled">

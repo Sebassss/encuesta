@@ -12,6 +12,9 @@ body {
     height: 100%;
 }
 
+.titulo_preg{
+    font-size: 25px !important;
+}
 
 .table td
 {
