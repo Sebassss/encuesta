@@ -35,7 +35,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Encuesta de Relevamiento</title>
+    <title>Encuesta de Diagnóstico Organizacional</title>
 
     <!-- Bootstrap Core CSS -->
 
@@ -73,7 +73,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="ticket"><b>Encuesta de Relevamiento - Dirección administrativa</b></h5>
+                <h5 class="modal-title" id="ticket"><b>Encuesta de Diagnóstico Organizacional</b></h5>
 <!--                <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
 <!--                    <span aria-hidden="true">&times;</span>-->
 <!--                </button>-->
@@ -132,9 +132,9 @@
                 <img style=" margin: 0 auto;background-color: #fff" class="img-responsive img-rounded" src="framework/img/logo.png">
             </div>
         </h1>
-        <h3 class="transparencias"  style="color: #fff;">Dirección Administrativa</h3>
-        <h3 class="transparencias"><b>Gestión de RRHH.</b></h3>
-        <h2  class="transparencias">Encuesta de Relevamiento</h2>
+        <br>
+        <h3 class="transparencias"  style="color: #fff;">Encuesta de Diagnóstico Organizacional</h3>
+        <h3 class="transparencias"><b>Gestión de RRHH | <span style="color:#ccc"> Dirección Administrativa</span> </b></h3>
         <br>
         <a href="#top" class="btn btn-dark btn-lg">Comenzar</a>
     </div>
@@ -144,11 +144,16 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-left">
-                <h3>
-                    <i>La encuesta es una técnica para el relevamiento de datos. Permitirá conocer su opinión respecto de su puesto y lugar de trabajo. Para ello es fundamental que le brinde la mayor importancia y honestidad es sus respuestas ya que estos datos nos servirán para evaluar alternativas de solución y pensar en estrategias que puedan mejorar su labor diaria.
+                <h2><?php echo ($tipo==0 ) ? 'Encuesta para Agentes' : 'Encuesta para Agentes con Personal a Cargo' ?></h2>
+                <h4>
+
+                    <i>La encuesta es una técnica para el relevamiento de datos. Permitirá conocer su opinión respecto de su puesto y lugar de trabajo. Para ello es fundamental que le brinde la mayor importancia y honestidad a sus respuestas ya que estos datos nos servirán para evaluar alternativas de solución y pensar en estrategias que puedan mejorar su labor diaria.
                     <p></p><b>Esta encuesta es <u>anónima</u></b> y no persigue otro objetivo final y general más  que mejorar el trabajo de todos los colaboradores del Ministerio de Salud Pública.</i>
-                    <input  type="checkbox" id="leido" name="leido" value="1"><u>He leido este enunciado.</u></p>
-                </h3>
+                    </p>
+                    <br>
+                    <br>
+                    <span class="col-sm-12 col-lg-12 col-xs-12 text-center"> <input  type="checkbox" id="leido" name="leido" value="1"><u>He leido este enunciado.</u></span>
+                </h4>
         </div>
         <!-- /.row -->
     </div>
@@ -846,7 +851,7 @@ if($tipo==1) {
         <div class="row" >
             <div class="col-lg-10 col-lg-offset-1 text-center" >
                 <h2 >
-    3 - Que temas de los de abajo enumerados serian de prioridad para capacitar a los colaboradores de su equipo .
+    3 - Que temas de los de abajo enumerados serían de prioridad para capacitar a los colaboradores de su equipo .
     Por favor seleccione solo <b>4</b > de los que considere mas relevantes .
                 </h2 >
                 <form id = "3" name = "3" >
@@ -1129,8 +1134,8 @@ if($tipo==1) {
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <h4>
-                    Su colaboración es muy valiosa para nosotros.<br>
-                    <strong>Gestión de RRHH. - MSP</strong>
+                    Gracias por su colaboración, su opinión es muy valiosa.<br>
+                    <strong>Gestión de RRHH - MSP</strong>
                 </h4>
                 <p>Argentina
                     <br>San Juan</p>
@@ -1162,7 +1167,7 @@ if($tipo==1) {
     function add_options2()
     {
         var op_ley = '<div style="margin:0 !important; border: solid 1px #ccc; border-radius: 8px;" id="op_ley" class="form-group">'+
-            '<label class="control-label col-sm-12 label-info" style="text-align: center !important;">Indique en que categoria encuadra mejor sus funciones.</label>'+
+            '<label class="control-label col-sm-12 label-warning" style="text-align: center !important;">Indique en que categoria encuadra mejor sus funciones.</label>'+
             '<div class="col-sm-12">'+
             '<div class="row">'+
             '<div class="col-sm-3">'+
@@ -1208,7 +1213,7 @@ if($tipo==1) {
 
 
         var ley = '<div style="margin:0 !important; border: solid 1px #ccc; border-radius: 8px;" id="ley" class="form-group">'+
-            '<label class="control-label col-sm-12 label-info" style="text-align: center !important;">Ley</label>'+
+            '<label class="control-label col-sm-12 label-warning" style="text-align: center !important;">Ley</label>'+
         '<div class="col-sm-12">'+
         '<div class="row">'+
         '<div class="col-sm-6" style="text-align: center !important;">'+
@@ -1487,7 +1492,7 @@ if($tipo==1) {
                         cant_formacion = 1;
                         $("#cb_areaprog").empty();
                         $("#ley").remove();
-                        $("#myModal").find(".modal-body").append("<h3>Muchas gracias por su colaboración, es muy valiosa para el MPS.!</h3><p> código comprobante: "+response.code+"</p><p>"+response.fecha+"</p>");
+                        $("#myModal").find(".modal-body").append("<h3>Gracias por su colaboración, su opinión es muy valiosa</h3><p> código comprobante: "+response.code+"</p><p>"+response.fecha+"</p>");
                         $("#myModal").modal();
 
                         setTimeout(function(){
