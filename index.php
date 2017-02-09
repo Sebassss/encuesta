@@ -133,7 +133,7 @@
             </div>
         </h1>
         <h3 class="transparencias"  style="color: #fff;">Dirección Administrativa</h3>
-        <h3 class="transparencias"><b>Dpto. de Gestión de RRHH.</b></h3>
+        <h3 class="transparencias"><b>Gestión de RRHH.</b></h3>
         <h2  class="transparencias">Encuesta de Relevamiento</h2>
         <br>
         <a href="#top" class="btn btn-dark btn-lg">Comenzar</a>
@@ -146,8 +146,8 @@
             <div class="col-lg-12 text-left">
                 <h3>
                     <i>La encuesta es una técnica para el relevamiento de datos. Permitirá conocer su opinión respecto de su puesto y lugar de trabajo. Para ello es fundamental que le brinde la mayor importancia y honestidad es sus respuestas ya que estos datos nos servirán para evaluar alternativas de solución y pensar en estrategias que puedan mejorar su labor diaria.
-                    <b>Esta encuesta es <u>anónima</u></b> y no persigue otro objetivo final y general más  que mejorar el trabajo de todos los colaboradores del Ministerio de Salud Pública.</i>
-                    <input  type="checkbox" id="leido" name="leido" value="1"><u>He leido este enunciado.</u>
+                    <p></p><b>Esta encuesta es <u>anónima</u></b> y no persigue otro objetivo final y general más  que mejorar el trabajo de todos los colaboradores del Ministerio de Salud Pública.</i>
+                    <input  type="checkbox" id="leido" name="leido" value="1"><u>He leido este enunciado.</u></p>
                 </h3>
         </div>
         <!-- /.row -->
@@ -231,10 +231,10 @@
                             </div>
                         </div> <!-- /.form-group -->
 
-                        <div class="form-group">
+                        <div class="form-group" style="display:none">
                             <label for="firstName" class="col-sm-3 control-label">Puesto que ocupa</label>
                             <div class="col-sm-9">
-                                <input type="text" maxlength="50" value="" id="puesto" name="puesto" placeholder="Puesto que ocupa" class="form-control" autofocus>
+                                <input type="text" maxlength="50" value="campo anulado" id="puesto" name="puesto" placeholder="Puesto que ocupa" class="form-control" autofocus>
                             </div>
                         </div>
 
@@ -1130,7 +1130,7 @@ if($tipo==1) {
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <h4>
                     Su colaboración es muy valiosa para nosotros.<br>
-                    <strong>Dpto. Gestión de RRHH - MSP</strong>
+                    <strong>Gestión de RRHH - MSP</strong>
                 </h4>
                 <p>Argentina
                     <br>San Juan</p>
@@ -1162,22 +1162,27 @@ if($tipo==1) {
     function add_options2()
     {
         var op_ley = '<div style="margin:0 !important; border: solid 1px #ccc; border-radius: 8px;" id="op_ley" class="form-group">'+
-            '<label class="control-label col-sm-4">Indique en que categoria encuadra mejor sus funciones.</label>'+
-            '<div class="col-sm-8">'+
+            '<label class="control-label col-sm-12 label-info" style="text-align: center !important;">Indique en que categoria encuadra mejor sus funciones.</label>'+
+            '<div class="col-sm-12">'+
             '<div class="row">'+
-            '<div class="col-sm-4">'+
+            '<div class="col-sm-3">'+
             '<label class="radio-inline">'+
             '<input type="radio"  name="cat" value="1">Servicios Generales / Maestranza'+
             '</label>'+
             '</div>'+
-            '<div class="col-sm-4">'+
+            '<div class="col-sm-3">'+
             '<label class="radio-inline">'+
             '<input type="radio"  name="cat" value="2">Funciones Administrativas'+
             '</label>'+
             '</div>'+
-            '<div class="col-sm-4">'+
+            '<div class="col-sm-3">'+
             '<label class="radio-inline">'+
             '<input type="radio"  name="cat" value="3">Responsable o Jefe de Sector/Área con personal a cargo'+
+            '</label>'+
+            '</div>'+
+            '<div class="col-sm-3">'+
+            '<label class="radio-inline">'+
+            '<input type="radio"  name="cat" value="4">Otro'+
             '</label>'+
             '</div>'+
             '</div>'+
@@ -1203,15 +1208,15 @@ if($tipo==1) {
 
 
         var ley = '<div style="margin:0 !important; border: solid 1px #ccc; border-radius: 8px;" id="ley" class="form-group">'+
-            '<label class="control-label col-sm-4">Ley</label>'+
-        '<div class="col-sm-8">'+
+            '<label class="control-label col-sm-12 label-info" style="text-align: center !important;">Ley</label>'+
+        '<div class="col-sm-12">'+
         '<div class="row">'+
-        '<div class="col-sm-4">'+
+        '<div class="col-sm-6" style="text-align: center !important;">'+
         '<label class="radio-inline">'+
         '<input type="radio"  onclick="add_options2();"  name="ley" value="0">71Q'+
         '</label>'+
         '</div>'+
-        '<div class="col-sm-4">'+
+        '<div class="col-sm-6">'+
         '<label class="radio-inline">'+
         '<input type="radio"  onclick="add_options2();" name="ley" value="1">1148Q'+
         '</label>'+
