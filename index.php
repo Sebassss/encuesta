@@ -16,7 +16,9 @@
     }
     else
     {
-        die;
+        //die;
+    $tipo = "2";
+
     }
 
     //echo $tipo;
@@ -89,7 +91,9 @@
 </div>
 
 <!-- Navigation -->
-<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+
+
+<a style="<?php  if($tipo=="2") { echo 'display:none';} else{ echo '';} ?>" id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i  class="fa fa-bars"></i></a>
 <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
@@ -137,11 +141,12 @@
         <h2 class="transparencias"  style=" color: #fff; margin-top: 50px;">Encuesta de Diagnóstico Organizacional</h2>
         <h3 class="transparencias"><b>Gestión de RRHH | <span style="color:#ccc"> Dirección Administrativa</span> </b></h3>
         <br>
-        <a href="#top" class="btn btn-dark btn-lg">Comenzar</a>
+        <a href="index.php?tipo=1" class="btn btn-dark btn-lg">Encuesta para Agentes con Personal a Cargo</a>
+        <a href="index.php?tipo=0" class="btn btn-dark btn-lg">Encuesta para Agentes</a>
     </div>
 </header>
 
-<section id="item1" class="about">
+<section style="<?php  if($tipo=="2") { echo 'display:none';} else{ echo '';} ?>" id="item1" class="about">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-left">
@@ -162,7 +167,7 @@
     <!-- /.container -->
 </section>
 
-<section id="item2" class="services bg-info">
+<section style="<?php  if($tipo=="2") { echo 'display:none';} else{ echo '';} ?>" id="item2" class="services bg-info">
     <div class="container">
         <div class="row text-left">
             <div class="col-lg-10 col-lg-offset-1">
@@ -279,7 +284,7 @@
     <!-- /.container -->
 </section>
 
-<section id="item3" class="portfolio">
+<section style="<?php  if($tipo=="2") { echo 'display:none';} else{ echo '';} ?>" id="item3" class="portfolio">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -961,7 +966,7 @@ if($tipo==1) {
 }
 ?>
 
-<section id="item5" class="map bg-danger">
+<section style="<?php  if($tipo=="2") { echo 'display:none';} else{ echo '';} ?>" id="item5" class="map bg-danger">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -1074,7 +1079,7 @@ if($tipo==1) {
 
 
 
-    <section id="fin" class="map bg-warning">
+    <section style="<?php  if($tipo=="2") { echo 'display:none';} else{ echo '';} ?>" id="fin" class="map bg-warning">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -1102,7 +1107,7 @@ if($tipo==1) {
 
 </section>
 
-<div class="col-md-12" style="margin-top: 90px">
+<div style="<?php  if($tipo=="2") { echo 'display:none';} else{ echo '';} ?>" class="col-md-12" style="margin-top: 90px">
     <div class="row text-center" style="margin-bottom: 90px">
         <div id="fin_encuesta" class="btn btn-primary">Finalizar encuesta</div>
     </div>

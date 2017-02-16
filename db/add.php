@@ -71,8 +71,7 @@ $option_9_3 =  !isset($params_3['Option_9']) ? 0 : $params_3['Option_9'];
 $option_10_3 = !isset($params_3['Option_10']) ? 0 : $params_3['Option_10'];
 $option_11_3 = !isset($params_3['Option_11']) ? 0 : $params_3['Option_11'];
 $option_12_3 = !isset($params_3['Option_12']) ? 0 : $params_3['Option_12'];
-$option_13_3 = !isset($params_3['Option_13']) ? 0 : $params_3['Option_13'];
-$option_14_3 = !isset($params_3['Option_14']) ? 0 : $params_3['Option_14'];
+
 
 // 4 - Campos
 $params_4 = array();
@@ -89,8 +88,7 @@ $option_9_4 =  !isset($params_4['Option_9']) ? 0 : $params_4['Option_9'];
 $option_10_4 = !isset($params_4['Option_10']) ? 0 : $params_4['Option_10'];
 $option_11_4 = !isset($params_4['Option_11']) ? 0 : $params_4['Option_11'];
 $option_12_4 = !isset($params_4['Option_12']) ? 0 : $params_4['Option_12'];
-$option_13_4 = !isset($params_4['Option_13']) ? 0 : $params_4['Option_13'];
-$option_14_4 = !isset($params_4['Option_14']) ? 0 : $params_4['Option_14'];
+
 
 
 // 5 - Campos
@@ -102,11 +100,11 @@ $x = array();
 
 
 $result = $db->query("INSERT INTO  datos (tipo,zona,area,fechanac,sexo,primario,secundario,terciario,universitario,puesto,antiguedad,situacion,ley,cat,1a,1b,1c,1d,2a,2b,2c,2d,2e,3a,3b,3c,4a,4b,4c,
-                     3_op1,3_op2,3_op3,3_op4,3_op5,3_op6,3_op7,3_op8,3_op9,3_op10,3_op11,3_op12,3_op13,3_op14,
-                     4_op1,4_op2,4_op3,4_op4,4_op5,4_op6,4_op7,4_op8,4_op9,4_op10,4_op11,4_op12,4_op13,4_op14,comentario) values('$tipo', '$cb_zona', '$cb_areaprog','$fechanac','$sexo','$primario','$secundario','$terciario','$universitario','$puesto','$antiguedad','$situacion_trabajo','$ley','$cat',
+                     3_op1,3_op2,3_op3,3_op4,3_op5,3_op6,3_op7,3_op8,3_op9,3_op10,3_op11,3_op12,
+                     4_op1,4_op2,4_op3,4_op4,4_op5,4_op6,4_op7,4_op8,4_op9,4_op10,4_op11,4_op12,comentario) values('$tipo', '$cb_zona', '$cb_areaprog','$fechanac','$sexo','$primario','$secundario','$terciario','$universitario','$puesto','$antiguedad','$situacion_trabajo','$ley','$cat',
                                                '$a1','$b1','$c1','$d1', '$a2','$b2','$c2','$d2','$e2','$a3','$b3','$c3','$a4','$b4','$c4',
-                                               '$option_1_3','$option_2_3','$option_3_3','$option_4_3','$option_4_3','$option_6_3','$option_7_3','$option_8_3','$option_9_3','$option_10_3','$option_11_3','$option_12_3', '$option_13_3', '$option_14_3',
-                                               '$option_1_4','$option_2_4','$option_3_4','$option_4_4','$option_4_4','$option_6_4','$option_7_4','$option_8_4','$option_9_4','$option_10_4','$option_11_4','$option_12_4', '$option_13_4','$option_14_4','$comentario')");
+                                               '$option_1_3','$option_2_3','$option_3_3','$option_4_3','$option_4_3','$option_6_3','$option_7_3','$option_8_3','$option_9_3','$option_10_3','$option_11_3','$option_12_3', 
+                                               '$option_1_4','$option_2_4','$option_3_4','$option_4_4','$option_4_4','$option_6_4','$option_7_4','$option_8_4','$option_9_4','$option_10_4','$option_11_4','$option_12_4', '$comentario')");
 
 $mensaje = "No pudo Agregar.";
 $estado = "false";
