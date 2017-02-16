@@ -373,7 +373,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td>Conozco los objetivos funciones y procesos que tiene el área en la que me desempeño.</td>
+                                    <td>Conozco los objetivos, funciones y procesos que tiene el área en la que me desempeño.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="1b" value="0">
@@ -667,7 +667,7 @@
                                 </tr>
 
                                 <tr>
-                                    <td>Mi lugar de trabajose encuentra limpio y ordenado.</td>
+                                    <td>Mi lugar de trabajo se encuentra limpio y ordenado.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="3b" value="0">
@@ -904,14 +904,16 @@ if($tipo==1) {
                         </td >
                     </tr >
 
+                  
+
                     <tr >
-                        <td > Comunicación efectiva </td >
+                        <td > Oratoria</td >
                         <td >
                             <label class="radio-inline" >
                                 <input class="zoom" onclick="javascript:cantidadSeleccionados(this);" type = "checkbox" id = "Option_7" name = "Option_7" value = "1" >
                             </label >
                         </td >
-                        <td > Planificación Estrategica </td >
+                        <td > Gestión del talento </td >
                         <td >
                             <label class="radio-inline" >
                                 <input class="zoom" onclick="javascript:cantidadSeleccionados(this);" type = "checkbox" id = "Option_8" name = "Option_8" value = "1" >
@@ -920,13 +922,13 @@ if($tipo==1) {
                     </tr >
 
                     <tr >
-                        <td > Oratoria</td >
+                        <td > Office(Word, Excel)</td >
                         <td >
                             <label class="radio-inline" >
                                 <input class="zoom" onclick="javascript:cantidadSeleccionados(this);" type = "checkbox" id = "Option_9" name = "Option_9" value = "1" >
                             </label >
                         </td >
-                        <td > Gestión del talento </td >
+                        <td > Clima Laboral </td >
                         <td >
                             <label class="radio-inline" >
                                 <input class="zoom" onclick="javascript:cantidadSeleccionados(this);" type = "checkbox" id = "Option_10" name = "Option_10" value = "1" >
@@ -935,31 +937,16 @@ if($tipo==1) {
                     </tr >
 
                     <tr >
-                        <td > Office(Word, Excel)</td >
+                        <td > Manejo de correo electrónico </td >
                         <td >
                             <label class="radio-inline" >
                                 <input class="zoom" onclick="javascript:cantidadSeleccionados(this);" type = "checkbox" id = "Option_11" name = "Option_11" value = "1" >
                             </label >
                         </td >
-                        <td > Clima Laboral </td >
-                        <td >
-                            <label class="radio-inline" >
-                                <input class="zoom" onclick="javascript:cantidadSeleccionados(this);" type = "checkbox" id = "Option_12" name = "Option_12" value = "1" >
-                            </label >
-                        </td >
-                    </tr >
-
-                    <tr >
-                        <td > Manejo de correo electrónico </td >
-                        <td >
-                            <label class="radio-inline" >
-                                <input class="zoom" onclick="javascript:cantidadSeleccionados(this);" type = "checkbox" id = "Option_13" name = "Option_13" value = "1" >
-                            </label >
-                        </td >
                         <td > Otros(Describa)</td >
                         <td >
                             <label class="radio-inline" >
-                                <input maxlength="20" type = "text" id = "Option_14" placeholder="Otro" name = "Option_14" >
+                                <input maxlength="20" type = "text" id = "Option_12" placeholder="Otro" name = "Option_12" >
                             </label >
                         </td >
                     </tr >
@@ -1030,14 +1017,16 @@ if($tipo==1) {
                         </td>
                     </tr>
 
+
+
                     <tr>
-                        <td>Comunicación efectiva</td>
+                        <td>Oratoria</td>
                         <td>
                             <label class="radio-inline">
                                 <input class="zoom" type="checkbox" id="Option_7" name="Option_7" value="1">
                             </label>
                         </td>
-                        <td>Planificación Estrategica</td>
+                        <td>Gestión del talento</td>
                         <td>
                             <label class="radio-inline">
                                 <input class="zoom" type="checkbox" id="Option_8" name="Option_8" value="1">
@@ -1046,13 +1035,13 @@ if($tipo==1) {
                     </tr>
 
                     <tr>
-                        <td>Oratoria</td>
+                        <td>Office (Word, Excel)</td>
                         <td>
                             <label class="radio-inline">
                                 <input class="zoom" type="checkbox" id="Option_9" name="Option_9" value="1">
                             </label>
                         </td>
-                        <td>Gestión del talento</td>
+                        <td>Clima Laboral</td>
                         <td>
                             <label class="radio-inline">
                                 <input class="zoom" type="checkbox" id="Option_10" name="Option_10" value="1">
@@ -1061,31 +1050,16 @@ if($tipo==1) {
                     </tr>
 
                     <tr>
-                        <td>Office (Word, Excel)</td>
+                        <td>Manejo de correo electrónico</td>
                         <td>
                             <label class="radio-inline">
                                 <input class="zoom" type="checkbox" id="Option_11" name="Option_11" value="1">
                             </label>
                         </td>
-                        <td>Clima Laboral</td>
-                        <td>
-                            <label class="radio-inline">
-                                <input class="zoom" type="checkbox" id="Option_12" name="Option_12" value="1">
-                            </label>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Manejo de correo electrónico</td>
-                        <td>
-                            <label class="radio-inline">
-                                <input class="zoom" type="checkbox" id="Option_13" name="Option_13" value="1">
-                            </label>
-                        </td>
                         <td>Otros (Describa)</td>
                         <td>
                             <label class="radio-inline">
-                                <input maxlength="20" type="text" id="Option_14" placeholder="Otro" name="Option_14" >
+                                <input maxlength="20" type="text" id="Option_12" placeholder="Otro" name="Option_12" >
                             </label>
                         </td>
                     </tr>
@@ -1353,8 +1327,6 @@ if($tipo==1) {
         var Option_9 = $("#4").find('input[name=Option_9]:checked').val();
         var Option_10 = $("#4").find('input[name=Option_10]:checked').val();
         var Option_11 = $("#4").find('input[name=Option_11]:checked').val();
-        var Option_12 = $("#4").find('input[name=Option_12]:checked').val();
-        var Option_13 = $("#4").find('input[name=Option_13]:checked').val();
 
 
 
@@ -1449,9 +1421,7 @@ if($tipo==1) {
                 typeof(Option_8) == 'undefined' &&
                 typeof(Option_9) == 'undefined' &&
                 typeof(Option_10) == 'undefined' &&
-                typeof(Option_11) == 'undefined' &&
-                typeof(Option_12) == 'undefined' &&
-                typeof(Option_13) == 'undefined') {
+                typeof(Option_11) == 'undefined') {
                 alert("Seleccione al menos una opción del Item 4.");
                 return false;
             }
