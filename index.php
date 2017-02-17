@@ -1473,7 +1473,7 @@ if($tipo==1) {
                         $("#myModal").modal();
 
                         setTimeout(function(){
-                            window.location.reload();
+                            window.location = "index.php";
                         },10000);
 
                         //alert("Muchas Gracias por su respuesta.");
