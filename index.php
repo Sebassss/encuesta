@@ -64,7 +64,12 @@
 
     <link rel="icon" type="image/png" href="ico/favicon.png" />
 
-
+<script>
+    function agentes()
+    {
+        window.location.href='index.php?tipo=0#item1'
+    }
+</script>
 </head>
 
 <body>
@@ -1646,11 +1651,7 @@ if($tipo==1) {
     }
 
 
-    function agentes()
-    {
-            
-        window.location.href='index.php?tipo=0'
-    }
+
 </script>
 
 </body>
