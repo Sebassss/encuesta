@@ -131,6 +131,8 @@
 <!-- Header -->
 <header id="top" class="header">
     <div class="text-vertical-center">
+
+    <!--
         <h1 style="text-align: center" >
             <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12">
                 <img style=" margin: 0 auto;background-color: #fff;" class="img-responsive img-rounded" src="framework/img/logo.png">
@@ -141,8 +143,14 @@
         <h2 class="transparencias"  style=" color: #fff; margin-top: 50px;">Encuesta de Diagnóstico Organizacional</h2>
         <h3 class="transparencias"><b>Gestión de RRHH | <span style="color:#ccc"> Dirección Administrativa</span> </b></h3>
         <br>
+        -->
+
+        <a href="javascript:agentes();" class="btn btn-dark btn-lg">Encuesta</a>
+
+        <!--
         <a href="index.php?tipo=1" class="btn btn-dark btn-lg">Encuesta para Agentes con Personal a Cargo</a>
         <a href="index.php?tipo=0" class="btn btn-dark btn-lg">Encuesta para Agentes</a>
+        -->
     </div>
 </header>
 
@@ -1622,7 +1630,10 @@ if($tipo==1) {
     $(document).ready(function(){
         $('html,body').animate({
             scrollTop: $("#top").offset().top
+            window.location.href='#item2';
         }, 1000);
+
+        
     });
 
     function justNumbers(e)
@@ -1632,6 +1643,13 @@ if($tipo==1) {
             return true;
 
         return /\d/.test(String.fromCharCode(keynum));
+    }
+
+
+    function agentes()
+    {
+            
+        window.location.href='index.php?tipo=0'
     }
 </script>
 
