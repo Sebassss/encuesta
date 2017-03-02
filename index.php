@@ -67,7 +67,12 @@
 <script>
     function agentes()
     {
+
+
+
+
         window.location.href='index.php?tipo=0#item1'
+
     }
 </script>
 </head>
@@ -1635,7 +1640,7 @@ if($tipo==1) {
     $(document).ready(function(){
         $('html,body').animate({
             scrollTop: $("#top").offset().top
-            window.location.href='#item2';
+            //window.location.href='#item2';
         }, 1000);
 
         
