@@ -176,7 +176,7 @@
                     </p>
                     <br>
                     <br>
-                    <span class="col-sm-12 col-lg-12 col-xs-12 text-center"> <input  type="checkbox" id="leido" name="leido" value="1"><u>He leido este enunciado.</u></span>
+                    <span class="col-sm-12 col-lg-12 col-xs-12 text-center"> <div class="checkbox"> <input  type="checkbox" id="leido" name="leido" value="1"><u>He leido este enunciado.</u></div></span>
                 </h4>
         </div>
         <!-- /.row -->
@@ -291,6 +291,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label for="firstName" class="col-sm-3 control-label">Médico comunitario</label>
+                            <div class="col-sm-9" >
+                                <input type="radio" onclick="add_options();" name="situacion_trabajo" value="2"  class="form-control" autofocus>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="firstName" class="col-sm-3 control-label">Residente</label>
+                            <div class="col-sm-9" >
+                                <input type="radio" onclick="add_options();" name="situacion_trabajo" value="3"  class="form-control" autofocus>
+                            </div>
+                        </div>
+
                     </form> <!-- /form -->
                 </div>
 
@@ -366,7 +380,7 @@
                                 <tbody>
 
                                 <!--Pregunta 1-->
-                                <tr>
+                                <tr><!--1a-->
                                     <td>Tengo conocimientos especificos sobre cuales son mis tareas y funciones.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
@@ -395,7 +409,7 @@
                                     </td>
                                 </tr>
 
-                                <tr>
+                                <tr><!--1b-->
                                     <td>Conozco los objetivos, funciones y procesos que tiene el área en la que me desempeño.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
@@ -424,7 +438,7 @@
                                     </td>
                                 </tr>
 
-                                <tr>
+                                <tr> <!--1c-->
                                     <td>Conozco con claridad sobre cuales son los resultados que se espera de mi colaboración.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
@@ -453,7 +467,7 @@
                                     </td>
                                 </tr>
 
-                                <tr>
+                                <tr><!--1d-->
                                     <td>Me siento a gusto con las tareas y funciones que realizo.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
@@ -482,14 +496,128 @@
                                     </td>
                                 </tr>
 
+                                <tr> <!--1e-->
+                                    <td>Conozco cuáles son los objetivos de mi organización.</td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1e" value="0">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1e" value="1">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1e" value="2">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1e" value="3">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1e" value="4">
+                                        </label>
+                                    </td>
+                                </tr>
 
+                                <tr> <!--1f-->
+                                    <td>Conozco la Visión y Misión de mi organización.</td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1f" value="0">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1f" value="1">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1f" value="2">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1f" value="3">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1f" value="4">
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                <tr> <!--1g-->
+                                    <td>Estoy de acuerdo con los objetivos laborales que se me plantearon.</td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1g" value="0">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1g" value="1">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1g" value="2">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1g" value="3">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1g" value="4">
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                <tr> <!--1h-->
+                                    <td>Es importante que se brinde capacitación adecuada para mejorar mi desempeño.</td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1h" value="0">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1h" value="1">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1h" value="2">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1h" value="3">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="1h" value="4">
+                                        </label>
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
 
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
-                                    <th class="text-center">Respecto a mi Jefe o Superior</th>
+                                    <th class="text-center">Respecto a mi Jefe o Superior Inmediato</th>
                                     <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
                                     <th class="text-center">2</th>
@@ -500,7 +628,7 @@
                                 <tbody>
 
                                 <!--Pregunta 1-->
-                                <tr>
+                                <tr> <!--2a-->
                                     <td>Identifico claramente quien es mi Jefe o Superior.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
@@ -529,7 +657,7 @@
                                     </td>
                                 </tr>
 
-                                <tr>
+                                <tr> <!--2b-->
                                     <td>Encuentro apoyo y confianza en mi Jefe o Superior para el desarrollo de mis actividades.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
@@ -558,7 +686,7 @@
                                     </td>
                                 </tr>
 
-                                <tr>
+                                <tr> <!--2c-->
                                     <td>Mi Jefe o Superior me imparte funciones y tareas de manera clara.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
@@ -587,7 +715,7 @@
                                     </td>
                                 </tr>
 
-                                <tr>
+                                <tr> <!--2d-->
                                     <td>Tengo un excelente Jefe/Superior.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
@@ -615,7 +743,7 @@
                                         </label>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr> <!--2e-->
                                     <td>Mi Jefe o Superior me alienta a proponer nuevas ideas o escucha mis sugerencias .</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
@@ -660,7 +788,7 @@
                                 <tbody>
 
                                 <!--Pregunta 1-->
-                                <tr>
+                                <tr> <!--3a-->
                                     <td>Cuento con las herramientas e instrumentos necesarios para poder realizar mi trabajo adecuadamente.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
@@ -689,8 +817,8 @@
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <td>Mi lugar de trabajo se encuentra limpio y ordenado.</td>
+                                <tr> <!--3b-->
+                                    <td>Los equipos que utilizo (PC, teléfono, escritorios, sillas) son mantenidas en forma adecuada..</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="3b" value="0">
@@ -718,8 +846,8 @@
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <td>Trabajo en un ambiente amigable y de trato cordial.</td>
+                                <tr> <!--3c-->
+                                    <td>Mi lugar de trabajo se encuentra limpio y ordenado.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="3c" value="0">
@@ -747,6 +875,63 @@
                                     </td>
                                 </tr>
 
+                                <tr> <!--3d-->
+                                    <td>Cuento con espacio suficiente y seguro para realizar mi trabajo.</td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="3d" value="0">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="3d" value="1">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="3d" value="2">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="3d" value="3">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="3d" value="4">
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                <tr> <!--3e-->
+                                    <td>Me interesa evaluar oportunidad de trabajar en otra área del Ministerio de Salud.</td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="3e" value="0">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="3e" value="1">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="3e" value="2">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="3e" value="3">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="3e" value="4">
+                                        </label>
+                                    </td>
+                                </tr>
 
                                 </tbody>
                             </table>
@@ -765,7 +950,7 @@
                                 <tbody>
 
                                 <!--Pregunta 1-->
-                                <tr>
+                                <tr> <!--4a-->
                                     <td>Cuento con la información necesaria para desarrollar mi trabajo eficientemente.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
@@ -794,7 +979,7 @@
                                     </td>
                                 </tr>
 
-                                <tr>
+                                <tr> <!--4b-->
                                     <td>La información de interés es comunicada oportunamente.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
@@ -823,8 +1008,8 @@
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <td>Tengo fácil acceso a novedades y comunicaciones que se realizan a nivel central.</td>
+                                <tr> <!--4c-->
+                                    <td>Siempre estoy enterado de los reglamentos, normas, procedimientos, etc..</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="4c" value="0">
@@ -848,6 +1033,200 @@
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="4c" value="4">
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                <tr> <!--4d-->
+                                    <td>Tengo fácil acceso a novedades y comunicaciones que se realizan a Nivel Central.</td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="4d" value="0">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="4d" value="1">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="4d" value="2">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="4d" value="3">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="4d" value="4">
+                                        </label>
+                                    </td>
+                                </tr>
+
+
+
+
+                                </tbody>
+                            </table>
+
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th class="text-center">Respecto a mi Area y Compañeros</th>
+                                    <th class="text-center">NS / NC</th>
+                                    <th class="text-center">1</th>
+                                    <th class="text-center">2</th>
+                                    <th class="text-center">3</th>
+                                    <th class="text-center">4</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <!--Pregunta 1-->
+                                <tr> <!--5a-->
+                                    <td>En mi equipo trabajamos juntos para resolver los problemas de la organización.</td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5a" value="0">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5a" value="1">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5a" value="2">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5a" value="3">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5a" value="4">
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                <tr> <!--5b-->
+                                    <td>Trabajo en un ambiente amigable y de trato cordial.</td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5b" value="0">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5b" value="1">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5b" value="2">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5b" value="3">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5b" value="4">
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                <tr> <!--5c-->
+                                    <td>Comparto actividades extralaborales con mis compañeros.</td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5c" value="0">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5c" value="1">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5c" value="2">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5c" value="3">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5c" value="4">
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                <tr> <!--5d-->
+                                    <td>Ante mi ausencia, cuento con el soporte y apoyo de mi área/compañeros para no obstaculizar la labor.</td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5d" value="0">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5d" value="1">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5d" value="2">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5d" value="3">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5d" value="4">
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                <tr> <!--5e-->
+                                    <td>Hay buena cooperación entre las distintas áreas para el desarrllo de un trabajo en común.</td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5e" value="0">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5e" value="1">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5e" value="2">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5e" value="3">
+                                        </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="radio-inline">
+                                            <input type="radio"  name="5e" value="4">
                                         </label>
                                     </td>
                                 </tr>
@@ -1319,6 +1698,10 @@ if($tipo==1) {
         var b1 = $('input[name=1b]:checked').val();
         var c1 = $('input[name=1c]:checked').val();
         var d1 = $('input[name=1d]:checked').val();
+        var e1 = $('input[name=1e]:checked').val();
+        var f1 = $('input[name=1f]:checked').val();
+        var g1 = $('input[name=1g]:checked').val();
+        var h1 = $('input[name=1h]:checked').val();
 
         var a2 = $('input[name=2a]:checked').val();
         var b2 = $('input[name=2b]:checked').val();
@@ -1329,11 +1712,20 @@ if($tipo==1) {
         var a3 = $('input[name=3a]:checked').val();
         var b3 = $('input[name=3b]:checked').val();
         var c3 = $('input[name=3c]:checked').val();
+        var d3 = $('input[name=3d]:checked').val();
+        var e3 = $('input[name=3e]:checked').val();
 
         var a4 = $('input[name=4a]:checked').val();
         var b4 = $('input[name=4b]:checked').val();
         var c4 = $('input[name=4c]:checked').val();
+        var d4 = $('input[name=4d]:checked').val();
 
+
+        var a5 = $('input[name=5a]:checked').val();
+        var b5 = $('input[name=5b]:checked').val();
+        var c5 = $('input[name=5c]:checked').val();
+        var d5 = $('input[name=5d]:checked').val();
+        var e5 = $('input[name=5e]:checked').val();
 
         //3
         //compruebo mediante cant. seleccionados
@@ -1394,7 +1786,11 @@ if($tipo==1) {
         if( typeof(a1)  == 'undefined' ||
             typeof(b1) == 'undefined' ||
             typeof(c1) == 'undefined' ||
-            typeof(d1) == 'undefined')
+            typeof(d1) == 'undefined' ||
+            typeof(e1) == 'undefined' ||
+            typeof(f1) == 'undefined' ||
+            typeof(g1) == 'undefined' ||
+            typeof(h1) == 'undefined')
         {
             alert("Hay opciones sin seleccionar en el Item 2.");
             return false;
@@ -1412,7 +1808,9 @@ if($tipo==1) {
 
         if( typeof(a3) == 'undefined' ||
             typeof(b3) == 'undefined' ||
-            typeof(c3) == 'undefined' )
+            typeof(c3) == 'undefined' ||
+            typeof(d3) == 'undefined' ||
+            typeof(e3) == 'undefined' )
         {
             alert("Hay opciones sin seleccionar en el Item 2.");
             return false;
@@ -1420,7 +1818,18 @@ if($tipo==1) {
 
         if( typeof(a4) == 'undefined' ||
             typeof(b4) == 'undefined' ||
-            typeof(c4) == 'undefined' )
+            typeof(c4) == 'undefined' ||
+            typeof(d4) == 'undefined' )
+        {
+            alert("Hay opciones sin seleccionar en el Item 2.");
+            return false;
+        }
+
+        if( typeof(a5) == 'undefined' ||
+            typeof(b5) == 'undefined' ||
+            typeof(c5) == 'undefined' ||
+            typeof(d5) == 'undefined' ||
+            typeof(e5) == 'undefined' )
         {
             alert("Hay opciones sin seleccionar en el Item 2.");
             return false;
