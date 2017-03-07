@@ -149,7 +149,7 @@
         <br>
         -->
 
-        <a href="javascript:agentes();" class="btn btn-dark btn-lg">Encuesta</a>
+       <!-- <a href="javascript:agentes();" class="btn btn-dark btn-lg">Encuesta</a> -->
 
         <!--
         <a href="index.php?tipo=1" class="btn btn-dark btn-lg">Encuesta para Agentes con Personal a Cargo</a>
@@ -162,7 +162,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-left">
-                <h2 class="titulo_preg"><?php echo ($tipo==0 ) ? 'Encuesta para Agentes' : 'Encuesta para Agentes con Personal a Cargo' ?></h2>
+                <h2 class="titulo_preg">Encuesta para Agentes </h2>
                 <h4>
 
                     <i>La encuesta es una técnica para el relevamiento de datos. Permitirá conocer su opinión respecto de su puesto y lugar de trabajo. Para ello es fundamental que le brinde la mayor importancia y honestidad a sus respuestas ya que estos datos nos servirán para evaluar alternativas de solución y pensar en estrategias que puedan mejorar su labor diaria.
@@ -314,7 +314,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h2 class="titulo_preg">2 - Para cada afirmación marque la casilla correspondiente al numero que mejor identifica su opinion.</h2>
+                <h2 class="titulo_preg">2 - Para cada afirmación marque la casilla correspondiente al número que mejor identifica su opinión.</h2>
                 <hr class="small">
                 <div class="row ">
                     <div class="col-md-3"></div>
@@ -322,8 +322,8 @@
                         <table class="table table-striped">
                             <thead>
                             <tr class="text-center">
-                                <th class="text-center">CALIFICACION</th>
-                                <th class="text-center">PUNTUACION</th>
+                                <th class="text-center">CALIFICACIÓN</th>
+                                <th class="text-center">PUNTUACIÓN</th>
 
                             </tr>
                             </thead>
@@ -339,7 +339,7 @@
                             </tr>
 
                             <tr>
-                                <td>En Desacuerdo</td>
+                                <td>En desacuerdo</td>
                                 <td>2</td>
                             </tr>
                             <tr>
@@ -375,7 +375,7 @@
 
                                 <!--Pregunta 1-->
                                 <tr><!--1a-->
-                                    <td>Tengo conocimientos especificos sobre cuales son mis tareas y funciones.</td>
+                                    <td>Tengo conocimientos específicos sobre cuáles son mis tareas y funciones.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="1a" value="0">
@@ -771,7 +771,7 @@
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
-                                    <th class="text-center">Respecto Medioambiente de trabajo</th>
+                                    <th class="text-center">Respecto Medio ambiente de trabajo</th>
                                     <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
                                     <th class="text-center">2</th>
@@ -1069,7 +1069,7 @@
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
-                                    <th class="text-center">Respecto a mi Area y Compañeros</th>
+                                    <th class="text-center">Respecto a mi Área y Compañeros</th>
                                     <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
                                     <th class="text-center">2</th>
@@ -1246,8 +1246,8 @@
         <div class="row" >
             <div class="col-lg-10 col-lg-offset-1 text-center" >
                 <h2 class="titulo_preg" >
-    3 - Que temas de los de abajo enumerados serían de prioridad para capacitar a los colaboradores de su equipo .
-    Por favor seleccione solo <b>4</b > de los que considere mas relevantes .
+    3 - Qué temas de los de abajo enumerados serían de prioridad para capacitar a los colaboradores de su equipo .
+    Por favor seleccione solo <b>4</b > de los que considere más relevantes .
                 </h2 >
                 <form id = "3" name = "3" >
                 <table class="table table-striped" style = "border: 1px solid #000" >
@@ -1402,7 +1402,7 @@
                                 <input class="zoom" type="checkbox" id="Option_5" name="Option_5" value="1">
                             </label>
                         </td>
-                        <td>Planificación Estrategica</td>
+                        <td>Planificación Estratégica</td>
                         <td>
                             <label class="radio-inline">
                                 <input class="zoom" type="checkbox" id="Option_6" name="Option_6" value="1">
@@ -1472,7 +1472,7 @@
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <h2 class="titulo_preg">
-                    5 - Por favor, en las siguientes lineas escriba comentarios,
+                    5 - Por favor, en las siguientes líneas escriba comentarios,
                     opiniones, aclaraciones o sugerencias en torno a los temas planteados en esta encuesta.
                 </h2>
 
@@ -1487,10 +1487,10 @@
     </div>
 
         <div class="col-md-12 text-center">
-        <h4>
+        <h3>
             Gracias por su colaboración, su opinión es muy valiosa.<br>
             <strong>Gestión de RRHH - MSP</strong>
-        </h4>
+        </h3>
         </div>
 
 </section>
@@ -1506,8 +1506,8 @@
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
 
-                <p>Argentina
-                    <br>San Juan</p>
+                <p>San Juan
+                    <br>Argentina</p>
                 <ul class="list-unstyled">
                     <li><i class="fa fa-phone fa-fw"></i> (+54 0264) 4305619 / 4305575 - msal.sanjuan@gmail.com</li>
                     <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:msal.sanjuan@gmail.com">Area de Informática - Ministerio de Salud Pública</a>
