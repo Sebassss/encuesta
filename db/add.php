@@ -38,23 +38,38 @@ $params_2 = array();
 parse_str($_POST['2'], $params_2);
 
 $a1 = !isset($params_2['1a']) ? 0 : $params_2['1a'];
-$a2 = !isset($params_2['2a']) ? 0 : $params_2['2a'];
-$a3 = !isset($params_2['3a']) ? 0 : $params_2['3a'];
-$a4 = !isset($params_2['4a']) ? 0 : $params_2['4a'];
-
 $b1 = !isset($params_2['1b']) ? 0 : $params_2['1b'];
-$b2 = !isset($params_2['2b']) ? 0 : $params_2['2b'];
-$b3 = !isset($params_2['3b']) ? 0 : $params_2['3b'];
-$b4 = !isset($params_2['4b']) ? 0 : $params_2['4b'];
-
 $c1 = !isset($params_2['1c']) ? 0 : $params_2['1c'];
-$c2 = !isset($params_2['2c']) ? 0 : $params_2['2c'];
-$c3 = !isset($params_2['3c']) ? 0 : $params_2['3c'];
-$c4 = !isset($params_2['4c']) ? 0 : $params_2['4c'];
-
 $d1 = !isset($params_2['1d']) ? 0 : $params_2['1d'];
+$e1 = !isset($params_2['1e']) ? 0 : $params_2['1e'];
+$f1 = !isset($params_2['1f']) ? 0 : $params_2['1f'];
+$g1 = !isset($params_2['1g']) ? 0 : $params_2['1g'];
+$h1 = !isset($params_2['1h']) ? 0 : $params_2['1h'];
+
+
+$a2 = !isset($params_2['2a']) ? 0 : $params_2['2a'];
+$b2 = !isset($params_2['2b']) ? 0 : $params_2['2b'];
+$c2 = !isset($params_2['2c']) ? 0 : $params_2['2c'];
 $d2 = !isset($params_2['2d']) ? 0 : $params_2['2d'];
 $e2 = !isset($params_2['2e']) ? 0 : $params_2['2e'];
+
+$a3 = !isset($params_2['3a']) ? 0 : $params_2['3a'];
+$b3 = !isset($params_2['3b']) ? 0 : $params_2['3b'];
+$c3 = !isset($params_2['3c']) ? 0 : $params_2['3c'];
+$d3 = !isset($params_2['3d']) ? 0 : $params_2['3d'];
+$e3 = !isset($params_2['3e']) ? 0 : $params_2['3e'];
+
+$a4 = !isset($params_2['4a']) ? 0 : $params_2['4a'];
+$b4 = !isset($params_2['4b']) ? 0 : $params_2['4b'];
+$c4 = !isset($params_2['4c']) ? 0 : $params_2['4c'];
+$d4 = !isset($params_2['4d']) ? 0 : $params_2['4d'];
+
+$a5 = !isset($params_2['5a']) ? 0 : $params_2['5a'];
+$b5 = !isset($params_2['5b']) ? 0 : $params_2['5b'];
+$c5 = !isset($params_2['5c']) ? 0 : $params_2['5c'];
+$d5 = !isset($params_2['5d']) ? 0 : $params_2['5d'];
+$e5 = !isset($params_2['5e']) ? 0 : $params_2['5e'];
+
 
 // 3 - Campos
 $params_3 = array();
@@ -99,12 +114,21 @@ $comentario = !isset($params_5['comentario']) ? 0 : $params_5['comentario'];
 $x = array();
 
 
-$result = $db->query("INSERT INTO  datos (tipo,zona,area,fechanac,sexo,primario,secundario,terciario,universitario,puesto,antiguedad,situacion,ley,cat,1a,1b,1c,1d,2a,2b,2c,2d,2e,3a,3b,3c,4a,4b,4c,
+$result = $db->query("INSERT INTO  datos (tipo,zona,area,fechanac,sexo,primario,secundario,terciario,universitario,puesto,antiguedad,situacion,ley,cat,
+                      1a,1b,1c,1d,1e,1f,1g,1h,
+                      2a,2b,2c,2d,2e,
+                      3a,3b,3c,3d,3e,
+                      4a,4b,4c,4d,
+                      5a,5b,5c,5d,5e,
                      3_op1,3_op2,3_op3,3_op4,3_op5,3_op6,3_op7,3_op8,3_op9,3_op10,3_op11,3_op12,
                      4_op1,4_op2,4_op3,4_op4,4_op5,4_op6,4_op7,4_op8,4_op9,4_op10,4_op11,4_op12,comentario) values('$tipo', '$cb_zona', '$cb_areaprog','$fechanac','$sexo','$primario','$secundario','$terciario','$universitario','$puesto','$antiguedad','$situacion_trabajo','$ley','$cat',
-                                               '$a1','$b1','$c1','$d1', '$a2','$b2','$c2','$d2','$e2','$a3','$b3','$c3','$a4','$b4','$c4',
-                                               '$option_1_3','$option_2_3','$option_3_3','$option_4_3','$option_4_3','$option_6_3','$option_7_3','$option_8_3','$option_9_3','$option_10_3','$option_11_3','$option_12_3', 
-                                               '$option_1_4','$option_2_4','$option_3_4','$option_4_4','$option_4_4','$option_6_4','$option_7_4','$option_8_4','$option_9_4','$option_10_4','$option_11_4','$option_12_4', '$comentario')");
+                                               '$a1','$b1','$c1','$d1','$e1','$f1','$g1','$h1', 
+                                               '$a2','$b2','$c2','$d2','$e2',
+                                               '$a3','$b3','$c3','$d3','$e3',
+                                               '$a4','$b4','$c4','$d4',
+                                               '$a5','$b5','$c5','$d5','$e5',
+                                               '$option_1_3','$option_2_3','$option_3_3','$option_4_3','$option_5_3','$option_6_3','$option_7_3','$option_8_3','$option_9_3','$option_10_3','$option_11_3','$option_12_3', 
+                                               '$option_1_4','$option_2_4','$option_3_4','$option_4_4','$option_5_4','$option_6_4','$option_7_4','$option_8_4','$option_9_4','$option_10_4','$option_11_4','$option_12_4', '$comentario')");
 
 $mensaje = "No pudo Agregar.";
 $estado = "false";

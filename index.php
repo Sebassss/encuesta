@@ -103,7 +103,7 @@
 <!-- Navigation -->
 
 
-<a style="<?php  if($tipo=="2") { echo 'display:none';} else{ echo '';} ?>" id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i  class="fa fa-bars"></i></a>
+<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i  class="fa fa-bars"></i></a>
 <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
@@ -116,10 +116,7 @@
         <li>
             <a href="#item2" onclick=$("#menu-close").click();>Item 2</a>
         </li>
-        <?php
-        if($tipo==1)
-        {
-         echo '<li >
+        <li>
             <a href = "#item3" onclick = $("#menu-close") . click();>Item 3 </a >
         </li >
         <li >
@@ -128,9 +125,6 @@
         <li>
             <a href="#item5" onclick=$("#menu-close").click();>Item 5</a>
         </li>
-        ';
-        }
-        ?>
 
         <li>
             <a href="#fin" onclick=$("#menu-close").click();>Finalizar Encuesta</a>
@@ -164,7 +158,7 @@
     </div>
 </header>
 
-<section style="<?php  if($tipo=="2") { echo 'display:none';} else{ echo '';} ?>" id="item1" class="about">
+<section  id="item1" class="about">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-left">
@@ -185,7 +179,7 @@
     <!-- /.container -->
 </section>
 
-<section style="<?php  if($tipo=="2") { echo 'display:none';} else{ echo '';} ?>" id="item2" class="services bg-info">
+<section  id="item2" class="services bg-info">
     <div class="container">
         <div class="row text-left">
             <div class="col-lg-10 col-lg-offset-1">
@@ -316,7 +310,7 @@
     <!-- /.container -->
 </section>
 
-<section style="<?php  if($tipo=="2") { echo 'display:none';} else{ echo '';} ?>" id="item3" class="portfolio">
+<section  id="item3" class="portfolio">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -1247,9 +1241,7 @@
     <!-- /.container -->
 </section>
 
-<?php
-if($tipo==1) {
-    echo '<section id = "item4" class="map bg-success" >
+<section id = "item4" class="map bg-success" >
     <div class="container" >
         <div class="row" >
             <div class="col-lg-10 col-lg-offset-1 text-center" >
@@ -1359,16 +1351,15 @@ if($tipo==1) {
             </div >
         </div >
     </div >
-</section >';
-}
-?>
+</section >
 
-<section style="<?php  if($tipo=="2") { echo 'display:none';} else{ echo '';} ?>" id="item5" class="map bg-danger">
+
+<section  id="item5" class="map bg-danger">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <h2 class="titulo_preg">
-                    <?php if($tipo==1) { echo '4'; }else{echo '3';}?> - Seleccione las capacitaciones que le ayudarían a Ud. a mejorar su desempeño:
+                    4 - Seleccione las capacitaciones que le ayudarían a Ud. a mejorar su desempeño:
                 </h2>
                 <form id="4" name="4">
                 <table class="table table-striped" style="border: 1px solid #000">
@@ -1476,12 +1467,12 @@ if($tipo==1) {
 
 
 
-    <section style="<?php  if($tipo=="2") { echo 'display:none';} else{ echo '';} ?>" id="fin" class="map bg-warning">
+    <section  id="fin" class="map bg-warning">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <h2 class="titulo_preg">
-                    <?php if($tipo==1) { echo '5'; }else{echo '4';}?> - Por favor, en las siguientes lineas escriba comentarios,
+                    5 - Por favor, en las siguientes lineas escriba comentarios,
                     opiniones, aclaraciones o sugerencias en torno a los temas planteados en esta encuesta.
                 </h2>
 
@@ -1504,7 +1495,7 @@ if($tipo==1) {
 
 </section>
 
-<div style="<?php  if($tipo=="2") { echo 'display:none';} else{ echo '';} ?>" class="col-md-12" style="margin-top: 90px">
+<div  class="col-md-12" style="margin-top: 90px">
     <div class="row text-center" style="margin-bottom: 90px">
         <div id="fin_encuesta" class="btn btn-primary">Finalizar encuesta</div>
     </div>
