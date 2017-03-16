@@ -179,7 +179,7 @@
     <!-- /.container -->
 </section>
 
-<section  id="item2" class="services bg-info grad_1" >
+<section  id="item2" class="services  grad_1" >
     <div class="container">
         <div class="row text-left">
             <div class="col-lg-10 col-lg-offset-1">
@@ -315,19 +315,18 @@
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <h2 class="titulo_preg">2 - Para cada afirmación marque la casilla correspondiente al número que mejor identifica su opinión.</h2>
-                <hr class="small">
-                <div class="row ">
+                <div class="row " style="margin-top: 50px;">
                     <div class="col-md-3"></div>
-                    <div class="col-md-6">
-                        <table class="table table-striped">
-                            <thead>
-                            <tr class="text-center">
+                    <div class="col-md-6" >
+                        <table  class="table ">
+                            <thead class="thead-inverse">
+                            <tr class="text-center" style="background-color: red; color:#fff">
                                 <th class="text-center">CALIFICACIÓN</th>
                                 <th class="text-center">PUNTUACIÓN</th>
 
                             </tr>
                             </thead>
-                            <tbody>
+                            <tbody style="background-color: #fff;">
 
                             <tr>
                                 <td>No sabe / No contesta</td>
@@ -357,12 +356,12 @@
                     <div class="col-md-3"></div>
                 </div>
                 <!-- /.row (nested) -->
-                <div class="row">
+                <div class="row" style="margin-top: 50px;">
                     <div class="col-md-12 text-left">
                         <form id="2" name="2">
                             <table class="table table-striped">
                                 <thead>
-                                <tr>
+                                <tr style="background-color: #14C4D2; color:#000;">
                                     <th class="text-center">Respecto a mi puesto</th>
                                     <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
@@ -374,7 +373,7 @@
                                 <tbody>
 
                                 <!--Pregunta 1-->
-                                <tr><!--1a-->
+                                <tr ><!--1a-->
                                     <td>Tengo conocimientos específicos sobre cuáles son mis tareas y funciones.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
@@ -610,7 +609,7 @@
 
                             <table class="table table-striped">
                                 <thead>
-                                <tr>
+                                <tr style="background-color: #E02F9A; color:#fff;" >
                                     <th class="text-center">Respecto a mi Jefe o Superior Inmediato</th>
                                     <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
@@ -770,7 +769,7 @@
 
                             <table class="table table-striped">
                                 <thead>
-                                <tr>
+                                <tr style="background-color: #F1E6C6; color:#000;">
                                     <th class="text-center">Respecto Medio ambiente de trabajo</th>
                                     <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
@@ -932,7 +931,7 @@
 
                             <table class="table table-striped">
                                 <thead>
-                                <tr>
+                                <tr class="text-center" style="background-color: #ee6c1c; color:#fff">
                                     <th class="text-center">Respecto a la comunicación</th>
                                     <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
@@ -1068,7 +1067,7 @@
 
                             <table class="table table-striped">
                                 <thead>
-                                <tr>
+                                <tr style="background-color: #14C4D2; color:#000;">
                                     <th class="text-center">Respecto a mi Área y Compañeros</th>
                                     <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
@@ -1241,13 +1240,12 @@
     <!-- /.container -->
 </section>
 
-<section id = "item4" class="map bg-success grad_3"  >
+<section id = "item4" class="map  grad_3"  >
     <div class="container" >
         <div class="row" >
             <div class="col-lg-10 col-lg-offset-1 text-center" >
                 <h2 class="titulo_preg"  >
-    3 - Qué temas de los de abajo enumerados serían de prioridad para capacitar a los colaboradores de su equipo .
-    Por favor seleccione solo <b>4</b > de los que considere más relevantes .
+    3 - Selecciones las 4 capacitaciones que considera Ud.  que le ayudarían a mejorar su desempeño:
                 </h2 >
                 <form id = "3" name = "3" >
                 <table class="table table-striped" style = "border: 1px solid #000" >
@@ -1354,8 +1352,8 @@
 </section >
 
 
-<section class="grad_2">
-<section  id="item5" class="map ">
+<section class="grad_2" >
+<section  id="item5" class="map " style="display: none">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -1472,7 +1470,7 @@
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <h2 class="titulo_preg">
-                    5 - Por favor, en las siguientes líneas escriba comentarios,
+                    4 - Por favor, en las siguientes líneas escriba comentarios,
                     opiniones, aclaraciones o sugerencias en torno a los temas planteados en esta encuesta.
                 </h2>
 
