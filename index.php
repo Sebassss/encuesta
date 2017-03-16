@@ -179,7 +179,7 @@
     <!-- /.container -->
 </section>
 
-<section  id="item2" class="services bg-info">
+<section  id="item2" class="services bg-info grad_1" >
     <div class="container">
         <div class="row text-left">
             <div class="col-lg-10 col-lg-offset-1">
@@ -310,7 +310,7 @@
     <!-- /.container -->
 </section>
 
-<section  id="item3" class="portfolio">
+<section  id="item3" class="portfolio grad_4 " >
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -1241,11 +1241,11 @@
     <!-- /.container -->
 </section>
 
-<section id = "item4" class="map bg-success" >
+<section id = "item4" class="map bg-success grad_3"  >
     <div class="container" >
         <div class="row" >
             <div class="col-lg-10 col-lg-offset-1 text-center" >
-                <h2 class="titulo_preg" >
+                <h2 class="titulo_preg"  >
     3 - Qué temas de los de abajo enumerados serían de prioridad para capacitar a los colaboradores de su equipo .
     Por favor seleccione solo <b>4</b > de los que considere más relevantes .
                 </h2 >
@@ -1354,7 +1354,8 @@
 </section >
 
 
-<section  id="item5" class="map bg-danger">
+<section class="grad_2">
+<section  id="item5" class="map ">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -1466,8 +1467,7 @@
 </section>
 
 
-
-    <section  id="fin" class="map bg-warning">
+<section  id="fin" class="map  ">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -1493,6 +1493,7 @@
         </h3>
         </div>
 
+</section>
 </section>
 
 <div  class="col-md-12" style="margin-top: 90px">
