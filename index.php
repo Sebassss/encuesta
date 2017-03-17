@@ -119,11 +119,11 @@
         <li>
             <a href = "#item3" onclick = $("#menu-close") . click();>Item 3 </a >
         </li >
-        <li >
-            <a href = "#item4" onclick = $("#menu-close") . click();>Item 4 </a >
-        </li >
+<!--        <li >-->
+<!--            <a href = "#item4" onclick = $("#menu-close") . click();>Item 4 </a >-->
+<!--        </li >-->
         <li>
-            <a href="#item5" onclick=$("#menu-close").click();>Item 5</a>
+            <a href="#item4" onclick=$("#menu-close").click();>Item 4</a>
         </li>
 
         <li>
@@ -181,14 +181,14 @@
 
 <section  id="item2" class="services  grad_1" >
     <div class="container">
-        <div class="row text-left">
+        <div class="row text-left" style="margin-top: 50px;">
             <div class="col-lg-10 col-lg-offset-1">
                 <h2 class="titulo_preg"> 1 - Responda los siguientes campos y seleccione el que corresponda.</h2>
-                <hr class="small">
+
                 <div class="col-lg-12" >
                     <form id="1" name="1" class="form-horizontal" role="form">
 
-                        <div class="form-group">
+                        <div class="form-group" style="margin-top: 50px;">
                             <label for="country" class="col-sm-3 control-label">Zona Sanitaria</label>
                             <div class="col-sm-9">
                                 <select name="cb_zona" id="cb_zona" class="form-control">
