@@ -22,10 +22,7 @@ $cb_zona= !isset($params_1['cb_zona']) ? 0 : $params_1['cb_zona'];
 $cb_areaprog = !isset($params_1['cb_areaprog']) ? 0 : $params_1['cb_areaprog'];
 $fechanac = !isset($params_1['fechanac']) ? "" : $params_1['fechanac'];
 $sexo = !isset($params_1['sexo']) ? 0 : $params_1['sexo'];
-$primario = !isset($params_1['primario']) ? 0 : $params_1['primario'];
-$secundario = !isset($params_1['secundario']) ? 0 : $params_1['secundario'];
-$terciario = !isset($params_1['terciario']) ? 0 : $params_1['terciario'];
-$universitario = !isset($params_1['universitario']) ? 0 : $params_1['universitario'];
+$formacion = !isset($params_1['formacion']) ? 0 : $params_1['formacion'];
 $puesto = !isset($params_1['puesto']) ? 0 : $params_1['puesto'];
 $antiguedad = !isset($params_1['antiguedad']) ? 0 : $params_1['antiguedad'];
 $situacion_trabajo = !isset($params_1['situacion_trabajo']) ? 0 : $params_1['situacion_trabajo'];
@@ -114,14 +111,14 @@ $comentario = !isset($params_5['comentario']) ? 0 : $params_5['comentario'];
 $x = array();
 
 
-$result = $db->query("INSERT INTO  datos (tipo,zona,area,fechanac,sexo,primario,secundario,terciario,universitario,puesto,antiguedad,situacion,ley,cat,
+$result = $db->query("INSERT INTO  datos (tipo,zona,area,fechanac,sexo,formacion,puesto,antiguedad,situacion,ley,cat,
                       1a,1b,1c,1d,1e,1f,1g,1h,
                       2a,2b,2c,2d,2e,
                       3a,3b,3c,3d,3e,
                       4a,4b,4c,4d,
                       5a,5b,5c,5d,5e,
                      3_op1,3_op2,3_op3,3_op4,3_op5,3_op6,3_op7,3_op8,3_op9,3_op10,3_op11,3_op12,
-                     4_op1,4_op2,4_op3,4_op4,4_op5,4_op6,4_op7,4_op8,4_op9,4_op10,4_op11,4_op12,comentario) values('$tipo', '$cb_zona', '$cb_areaprog','$fechanac','$sexo','$primario','$secundario','$terciario','$universitario','$puesto','$antiguedad','$situacion_trabajo','$ley','$cat',
+                     4_op1,4_op2,4_op3,4_op4,4_op5,4_op6,4_op7,4_op8,4_op9,4_op10,4_op11,4_op12,comentario) values('$tipo', '$cb_zona', '$cb_areaprog','$fechanac','$sexo','$formacion','$puesto','$antiguedad','$situacion_trabajo','$ley','$cat',
                                                '$a1','$b1','$c1','$d1','$e1','$f1','$g1','$h1', 
                                                '$a2','$b2','$c2','$d2','$e2',
                                                '$a3','$b3','$c3','$d3','$e3',

@@ -231,24 +231,24 @@
                         <div class="form-group">
                             <label class="control-label col-sm-3">Formación( última finalizada )</label>
                             <div class="col-sm-9">
-                                <div class="checkbox">
-                                    <label>
-                                        <input  onclick="javascript:cantidadSeleccionados2(this);" type="checkbox" id="primario" name="primario" value="1">Primario
+                                <div >
+                                    <label class="radio-inline">
+                                        <input   type="radio"  name="formacion" value="0">Primario
                                     </label>
                                 </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input  onclick="javascript:cantidadSeleccionados2(this);" type="checkbox" id="secundario" name="secundario" value="1">Secundario
+                                <div >
+                                    <label class="radio-inline">
+                                        <input   type="radio" name="formacion" value="1">Secundario
                                     </label>
                                 </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input  onclick="javascript:cantidadSeleccionados2(this);" type="checkbox" id="terciario" name="terciario" value="1">Terciario
+                                <div >
+                                    <label class="radio-inline">
+                                        <input   type="radio"  name="formacion" value="2">Terciario
                                     </label>
                                 </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input  onclick="javascript:cantidadSeleccionados2(this);" type="checkbox" id="universitario" name="universitario" value="1">Universitario
+                                <div >
+                                    <label class="radio-inline">
+                                        <input   type="radio"  name="formacion" value="3">Universitario
                                     </label>
                                 </div>
                             </div>
@@ -316,17 +316,17 @@
             <div class="col-lg-10 col-lg-offset-1 text-center">
                 <h2 class="titulo_preg">2 - Para cada afirmación marque la casilla correspondiente al número que mejor identifica su opinión.</h2>
                 <div class="row " style="margin-top: 50px;">
-                    <div class="col-md-3"></div>
-                    <div class="col-md-6" >
-                        <table  class="table ">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4" >
+                        <table  class="table" style="border: solid 5px #ccc" >
                             <thead class="thead-inverse">
-                            <tr class="text-center" style="background-color: red; color:#fff">
+                            <tr class="text-center " style="background-color: #ccc; color:#000">
                                 <th class="text-center">CALIFICACIÓN</th>
                                 <th class="text-center">PUNTUACIÓN</th>
 
                             </tr>
                             </thead>
-                            <tbody style="background-color: #fff;">
+                            <tbody style="background-color: #fff; font-weight: 700; color: gray;">
 
                             <tr>
                                 <td>No sabe / No contesta</td>
@@ -353,15 +353,15 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="col-md-3"></div>
+                    <div class="col-md-4"></div>
                 </div>
                 <!-- /.row (nested) -->
                 <div class="row" style="margin-top: 50px;">
                     <div class="col-md-12 text-left">
                         <form id="2" name="2">
-                            <table class="table table-striped">
+                            <table class="table table-striped" style="border: solid 5px #7b2622;">
                                 <thead>
-                                <tr style="background-color: #14C4D2; color:#000;">
+                                <tr style="background-color: #7b2622; color:#fff;">
                                     <th class="text-center">Respecto a mi puesto</th>
                                     <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
@@ -607,9 +607,9 @@
                                 </tbody>
                             </table>
 
-                            <table class="table table-striped">
+                            <table class="table table-striped" style="border: solid 5px #a03a21;">
                                 <thead>
-                                <tr style="background-color: #E02F9A; color:#fff;" >
+                                <tr style="background-color: #a03a21; color:#fff;" >
                                     <th class="text-center">Respecto a mi Jefe o Superior Inmediato</th>
                                     <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
@@ -767,10 +767,10 @@
                                 </tbody>
                             </table>
 
-                            <table class="table table-striped">
+                            <table class="table table-striped" style="border: solid 5px #c68a56;">
                                 <thead>
-                                <tr style="background-color: #F1E6C6; color:#000;">
-                                    <th class="text-center">Respecto Medio ambiente de trabajo</th>
+                                <tr style="background-color: #c68a56; color:#fff;">
+                                    <th class="text-center">Respecto al Medio Ambiente de trabajo</th>
                                     <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
                                     <th class="text-center">2</th>
@@ -898,7 +898,7 @@
                                 </tr>
 
                                 <tr> <!--3e-->
-                                    <td>Me interesa evaluar oportunidad de trabajar en otra área del Ministerio de Salud.</td>
+                                    <td>Me interesa la posibilidad de trabajar en otra área del MSP.</td>
                                     <td class="text-center">
                                         <label class="radio-inline">
                                             <input type="radio"  name="3e" value="0">
@@ -929,9 +929,9 @@
                                 </tbody>
                             </table>
 
-                            <table class="table table-striped">
+                            <table class="table table-striped" style="border: solid 5px #d7ceb3;">
                                 <thead>
-                                <tr class="text-center" style="background-color: #ee6c1c; color:#fff">
+                                <tr class="text-center" style="background-color: #d7ceb3; color:#000">
                                     <th class="text-center">Respecto a la comunicación</th>
                                     <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
@@ -1065,9 +1065,9 @@
                                 </tbody>
                             </table>
 
-                            <table class="table table-striped">
+                            <table class="table table-striped" style="border: solid 5px #58b6a8;">
                                 <thead>
-                                <tr style="background-color: #14C4D2; color:#000;">
+                                <tr  style="background-color: #58b6a8; color:#000;">
                                     <th class="text-center">Respecto a mi Área y Compañeros</th>
                                     <th class="text-center">NS / NC</th>
                                     <th class="text-center">1</th>
@@ -1248,7 +1248,7 @@
     3 - Selecciones las 4 capacitaciones que considera Ud.  que le ayudarían a mejorar su desempeño:
                 </h2 >
                 <form id = "3" name = "3" >
-                <table class="table table-striped" style = "border: 1px solid #000" >
+                <table class="table table-striped" style="border: solid 5px #ccc" >
                     <thead >
                     </tr >
                     </thead >
@@ -1529,9 +1529,8 @@
 <!-- Custom Theme JavaScript -->
 <script>
 
-    var cant = 1;
-    var cant_formacion = 1;
 
+    var cant = 1;
     function add_options2()
     {
         var op_ley = '<div style="margin:0 !important; border: solid 1px #ccc; border-radius: 8px;" id="op_ley" class="form-group">'+
@@ -1614,26 +1613,7 @@
         }
     }
 
-    function cantidadSeleccionados2(control)
-    {
-        var x =($(control).is(':checked'))
 
-        if( x == false)
-        {
-            cant_formacion--;
-            return;
-        }
-
-        if(cant_formacion > 1 )
-        {
-            $(control).prop("checked", false)
-            alert("Ha superado el máximo permitido");
-        }
-        else
-        {
-            cant_formacion++;
-        }
-    }
 
     function cantidadSeleccionados(control)
     {
@@ -1659,14 +1639,13 @@
     function valida()
     {
 
+
         var leido = $('input[name=leido]:checked').val();
         //1
         var sexo = $('input[name=sexo]:checked').val();
-        var primario = $('input[name=primario]:checked').val();
-        var secundario = $('input[name=secundario]:checked').val();
-        var terciario = $('input[name=terciario]:checked').val();
-        var universitario = $('input[name=universitario]:checked').val();
+
         var siatuacion = $('input[name=situacion_trabajo]:checked').val();
+        var formacion = $('input[name=formacion]:checked').val();
 
         var ley =$('input[name=ley]:checked').val();
         var op_ley =$('input[name=cat]:checked').val();
@@ -1744,17 +1723,7 @@
         if( typeof(sexo) == 'undefined') {alert("Seleccione tipo de sexo."); return false; }
 
 
-        if( cant_formacion <= 1)
-        {
-            alert("Seleccione al menos una opción sobre el ítem de formación.");
-            return false;
-        }
 
-        if( cant_formacion > 2)
-        {
-            alert("Seleccione solo un ítem sobre formación.");
-            return false;
-        }
 
         if($.trim($("#puesto").val()) == "")
         {
@@ -1768,6 +1737,8 @@
             return false;
         }
 
+
+        if( typeof(formacion) == 'undefined') {alert("Indique su formación."); return false; }
 
         if( typeof(siatuacion) == 'undefined') {alert("Indique su situación laboral."); return false; }
 

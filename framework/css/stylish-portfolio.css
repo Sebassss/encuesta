@@ -13,11 +13,11 @@
 
 
 .grad_1{
-    /*background: #ee6c1c;*/
-    /*background: -moz-linear-gradient(top, #ee6c1c 0%, #ffffff 100%);*/
-    /*background: -webkit-linear-gradient(top, #ee6c1c 0%,#ffffff 100%);*/
-    /*background: linear-gradient(to bottom, #ee6c1c 0%,#ffffff 100%);*/
-    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee6c1c', endColorstr='#ffffff',GradientType=0 );*/
+    /*background: #a03a21;*/
+    /*background: -moz-linear-gradient(top, #a03a21 0%, #ffffff 100%);*/
+    /*background: -webkit-linear-gradient(top, #a03a21 0%,#ffffff 100%);*/
+    /*background: linear-gradient(to bottom, #a03a21 0%,#ffffff 100%);*/
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a03a21', endColorstr='#ffffff',GradientType=0 );*/
 }
 
 .grad_2{
@@ -57,7 +57,7 @@ html,
 body {
     width: 100%;
     height: 100%;
-    background-color: #D7CEB3;
+    background-color: #fff;/*#F1E6C6;*/ /*#D7CEB3*/;
 }
 
 .titulo_preg{
