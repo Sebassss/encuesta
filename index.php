@@ -153,8 +153,9 @@
 
         <!--
         <a href="index.php?tipo=1" class="btn btn-dark btn-lg">Encuesta para Agentes con Personal a Cargo</a>
-        <a href="index.php?tipo=0" class="btn btn-dark btn-lg">Encuesta para Agentes</a>
         -->
+        <a href="#top" class="btn btn-dark btn-lg">Comenzar</a>
+
     </div>
 </header>
 
