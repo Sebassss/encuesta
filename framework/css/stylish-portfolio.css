@@ -259,7 +259,7 @@ hr.small {
     height: 720px;
     background: url(../img/bg.jpg) no-repeat center;
     
-    background-size: 100% 99%;
+    background-size: 100% 100%;
 
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bj.jpg', sizingMethod='scale');
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bj.jpg', sizingMethod='scale')";
