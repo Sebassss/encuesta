@@ -357,6 +357,6 @@ footer {
 
 .table {
     background-color: #e5e1de;
-    -webkit-box-shadow: 2px 2px 5px #999;
-    -moz-box-shadow: 2px 2px 5px #999;
+    -webkit-box-shadow: 12px 12px 5px #999;
+    -moz-box-shadow: 12px 12px 5px #999;
 }
