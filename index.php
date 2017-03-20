@@ -208,7 +208,7 @@
                         <div class="form-group">
                             <label for="birthDate" class="col-sm-3 control-label">Fecha de Nacimiento</label>
                             <div class="col-sm-9">
-                                <input type="date"  id="fechanac" name="fechanac" class="form-control">
+                                <input type="date" max="2017-12-31" id="fechanac" name="fechanac" class="form-control">
                             </div>
                         </div>
                         <div  class="form-group">
