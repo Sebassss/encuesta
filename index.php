@@ -108,7 +108,7 @@
     <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
         <li class="sidebar-brand">
-            <a href="#top" onclick=$("#menu-close").click();  >Inicio</a>
+            <a href="#top" onclick=$("#menu-close").click();>Inicio</a>
         </li>
         <li>
             <a href="#item1" onclick=$("#menu-close").click();>Item 1</a>
@@ -134,7 +134,7 @@
 
 <!-- Header -->
 <header id="top" class="header">
-    <div class="text-vertical-center">
+    <div class="text-center" >
 
     <!--
         <h1 style="text-align: center" >
@@ -154,7 +154,7 @@
         <!--
         <a href="index.php?tipo=1" class="btn btn-dark btn-lg">Encuesta para Agentes con Personal a Cargo</a>
         -->
-        <a href="#top" class="btn btn-dark btn-lg">Comenzar</a>
+        <a href="#top" class="btn btn-default btn-lg" style="background-color: #58b6a8; font-weight: bold; margin-top: 200px; color: #000">Comenzar Encuesta</a>
 
     </div>
 </header>
@@ -190,7 +190,7 @@
                     <form id="1" name="1" class="form-horizontal" role="form">
 
                         <div class="form-group" style="margin-top: 50px;">
-                            <label for="country" class="col-sm-3 control-label">Zona Sanitaria</label>
+                            <label for="country" class="col-sm-3 control-label">Lugar de trabajo</label>
                             <div class="col-sm-9">
                                 <select name="cb_zona" id="cb_zona" class="form-control">
                                     <option value="0" selected="">Seleccione...</option>
@@ -1066,7 +1066,7 @@
                                 </tbody>
                             </table>
 
-                            <table class="table table-striped" style="border: solid 5px #58b6a8;">
+                            <table class="table table-striped" style="border: solid 5px #58b6a8; ">
                                 <thead>
                                 <tr  style="background-color: #58b6a8; color:#000;">
                                     <th class="text-center">Respecto a mi Área y Compañeros</th>
@@ -1246,7 +1246,7 @@
         <div class="row" >
             <div class="col-lg-10 col-lg-offset-1 text-center" >
                 <h2 class="titulo_preg"  >
-    3 - Selecciones las 4 capacitaciones que considera Ud.  que le ayudarían a mejorar su desempeño:
+    3 - Selecciones las <b><u>4</u></b> capacitaciones que considera Ud.  que le ayudarían a mejorar su desempeño:
                 </h2 >
                 <form id = "3" name = "3" >
                 <table class="table table-striped" style="border: solid 5px #ccc" >
@@ -1497,7 +1497,7 @@
 
 <div  class="col-md-12" style="margin-top: 90px">
     <div class="row text-center" style="margin-bottom: 90px">
-        <div id="fin_encuesta" class="btn btn-primary">Finalizar encuesta</div>
+        <div id="fin_encuesta" class="btn btn-danger">Finalizar encuesta</div>
     </div>
 </div>
 <!-- Footer -->

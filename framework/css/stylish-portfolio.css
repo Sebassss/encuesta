@@ -51,13 +51,13 @@
 }
 
 .table-striped tbody tr.highlight td {
-    background-color: #fff;
+    background-color: #e5e1de;
 }
 html,
 body {
     width: 100%;
     height: 100%;
-    background-color: #fff;/*#F1E6C6;*/ /*#D7CEB3*/;
+    background-color: #e5e1de;/*#F1E6C6;*/ /*#D7CEB3*/;
 }
 
 .titulo_preg{
@@ -256,10 +256,10 @@ hr.small {
     display: table;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 720px;
     background: url(../img/bg.jpg) no-repeat center;
     
-    background-size: 100% 95%;
+    background-size: 100% 99%;
 
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bj.jpg', sizingMethod='scale');
 	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bj.jpg', sizingMethod='scale')";
@@ -356,5 +356,7 @@ footer {
 }
 
 .table {
-    background-color: #fff;
+    background-color: #e5e1de;
+    -webkit-box-shadow: 2px 2px 5px #999;
+    -moz-box-shadow: 2px 2px 5px #999;
 }
