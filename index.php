@@ -1493,19 +1493,22 @@
         </div>
 
 </section>
-</section>
 
+
+<section>
 <div  class="col-md-12" style="margin-top: 90px">
     <div class="row text-center" style="margin-bottom: 90px">
+
         <div id="fin_encuesta" class="btn btn-danger">Finalizar encuesta</div>
+
     </div>
 </div>
+</section>
 <!-- Footer -->
 <footer>
-    <div class="container">
+    <div class="container" style="clear: both;">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
-
                 <p>San Juan
                     <br>Argentina</p>
                 <ul class="list-unstyled">
@@ -1827,6 +1830,9 @@
     $("#fin_encuesta").on( "click", function()
     {
 
+
+
+
         if(valida() == true) {
             $.ajax({
                 url: 'db/add.php',
@@ -1852,7 +1858,7 @@
 
                     if(response.estado == "true")
                     {
-
+                        fin_encuesta
 
                         cant = 1;
                         cant_formacion = 1;
@@ -1866,6 +1872,7 @@
                         },10000);
 
                         //alert("Muchas Gracias por su respuesta.");
+                        $("#fin_encuesta").unbind('click');
                     }
 
                 },
