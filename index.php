@@ -1499,7 +1499,7 @@
 <div  class="col-md-12" style="margin-top: 90px">
     <div class="row text-center" style="margin-bottom: 90px">
 
-        <div id="fin_encuesta" class="btn btn-danger">Finalizar encuesta</div>
+        <button id="fin_encuesta" class="btn btn-danger">Finalizar encuesta</button>
 
     </div>
 </div>
@@ -1830,7 +1830,7 @@
     $("#fin_encuesta").on( "click", function()
     {
 
-
+        $('#fin_encuesta').prop('disabled', true);
 
 
         if(valida() == true) {
@@ -1858,7 +1858,7 @@
 
                     if(response.estado == "true")
                     {
-                        fin_encuesta
+
 
                         cant = 1;
                         cant_formacion = 1;
@@ -1879,9 +1879,14 @@
                 error: function (error) {
                     //console.log("Error: " + error)
                     //console.dir(error);
+                    $('#fin_encuesta').prop('disabled', false);
                 }
 
             })
+        }
+        else
+        {
+            $('#fin_encuesta').prop('disabled', false);
         }
     });
 
