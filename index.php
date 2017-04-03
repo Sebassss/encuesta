@@ -206,9 +206,9 @@
                         </div> <!-- /.form-group -->
 
                         <div class="form-group">
-                            <label for="birthDate" class="col-sm-3 control-label">Fecha de Nacimiento</label>
+                            <label for="birthDate" class="col-sm-3 control-label">Año de Nacimiento</label>
                             <div class="col-sm-9">
-                                <input type="date" max="2017-12-31" id="fechanac" name="fechanac" class="form-control">
+                                <input type="text" maxlength="4" onkeypress="return justNumbers(event);"  id="fechanac" name="fechanac" class="form-control">
                             </div>
                         </div>
                         <div  class="form-group">
