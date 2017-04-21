@@ -14,7 +14,7 @@
 /**
  * url de la base da datos
  */
-DEFINE('DB_HOSTING','localhost');
+DEFINE('DB_HOSTING','10.64.65.200');
 
 /**
  * Usuario para la base de datos
@@ -26,7 +26,7 @@ DEFINE('DB_USUARIO','root');
  * Contraseña de la base de datos
  */
 
-DEFINE('DB_CLAVE','');
+DEFINE('DB_CLAVE','nautilus');
 
 /**
  * Base de datos
